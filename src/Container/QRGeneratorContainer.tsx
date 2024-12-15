@@ -5,9 +5,7 @@ import QRCode from "qrcode";
 import { EncryptionMethod } from "../types/EncryptionMethod.types";
 import { useTranslation } from "react-i18next";
 import Logger from "../Services/Logger/logger";
-import { AdMob, AdOptions } from "@capacitor-community/admob";
 import { handleImageDownload } from "../Services/FileHandler/fileHandler";
-import { Capacitor } from "@capacitor/core";
 import showAdInterstitial from "../Services/Ads/AdInterstitial";
 
 export const QRGeneratorContainer: React.FC = () => {
