@@ -8,12 +8,12 @@ import { makeStatusBarTransparent } from "./Services/helper/statusBarUtils";
 import "./i18n";
 import { getRoutes } from "./routes";
 import NavbarView from "./Views/NavBar/NavbarView";
+import { AdBanner } from "./UIComponets/Ads/AdBanner";
 
 const MainApp: React.FC = () => {
   const [activeComponent, setActiveComponent] = useState<string>("home");
   const isDesktop = useDeviceCheck();
-
-  // Swipe and Key Navigation
+  
   const handlers = useSwipeNavigation({
     navLinks: [
       { path: "/", component: "home" },
@@ -28,10 +28,13 @@ const MainApp: React.FC = () => {
   makeStatusBarTransparent();
 
   return (
-    <div {...handlers} style={{ paddingTop: "9vh" }} className={isDesktop ? "desktop" : ""}>
-      <NavbarView setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
-      {getRoutes()}
-    </div>
+    <>
+      <AdBanner />
+      <div {...handlers} style={{ paddingTop: "9vh" }} className={isDesktop ? "desktop" : ""}>
+        <NavbarView setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
+        {getRoutes()}
+      </div>
+    </>
   );
 };
 

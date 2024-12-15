@@ -1,5 +1,6 @@
 export const datenschutz_text = `
 <strong>Diese Datenschutzerklärung und die Informationen sind in Englisch verfügbar unter dieser deutschen Version (Unser Zielmarkt ist derzeit Deutschland)</strong> <br /> <br /> 
+<strong>This privacy policy and information is available in English under this German version (Our target market is currently Germany)</strong> <br /> <br />
 <strong>Datenschutzerklärung für Webseite/App</strong> <br /><br /> 
 Vielen Dank für Ihren Besuch auf unserer Webseite/App. Wir legen großen Wert auf den Schutz Ihrer Daten und möchten Ihnen mit dieser Datenschutzerklärung einen Überblick darüber geben, wie wir Ihre Daten gemäß der Datenschutz-Grundverordnung (DSGVO), den europäischen Datenschutzgesetzen sowie dem California Consumer Privacy Act (CCPA) und kalifornischem Recht behandeln. <br /> <br /> 
 <strong>1. Verantwortliche Stelle</strong><br /> 

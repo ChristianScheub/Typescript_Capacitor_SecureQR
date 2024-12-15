@@ -76,7 +76,7 @@ export const QRGeneratorView: React.FC<QRGeneratorViewProps> = ({
       </Card>
 
       {qrCode && (
-        <Card>
+        <Card style={{paddingBottom: "5vw"}}>
           <h3>{t("generatorView_TitleGeneratedQR")}</h3>
           <img src={qrCode} alt="Generated QR Code" width={"100%"} />
           <br />

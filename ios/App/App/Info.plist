@@ -20,8 +20,16 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-6250689577715326~1194368060</string>
+    <key>GADIsAdManagerApp</key>
+    <true/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>NSCameraUsageDescription</key>
+    <string>This app requires camera access to scan QR codes.</string>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>This app uses data to enhance user experience with personalized ads. (Google AdMob)</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

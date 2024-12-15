@@ -7,7 +7,9 @@ Secure QR is a practical application for encrypting texts such as passwords and 
 
 Deutsche Kurzbeschreibung: Secure QR ist eine praktische Anwendung um Texte wie Passwörter zu verschlüsseln und einen QR Code zu generieren. Dieser lässt sich anschließend mit der App wieder entschlüsseln.
 
-## App Store Screens
+## App Screenshots
+
+ <img src="images/appStore/AdvertismentScreen.png" alt="Start Screen" height="300">
 
 | Start Screen                                                            | Generated QR Code                                                                        | QR Scanner                                                                     | QR Scan Result                                                         |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -107,88 +109,49 @@ export default tseslint.config({
 # Used NPM Modules
 According to the command npm list You can see the deeper NPM modules used and which of these are used in the licenses.json.
 
-├── @capacitor/android@6.2.0
-
-├── @capacitor/cli@6.2.0
-
-├── @capacitor/core@6.2.0
-
-├── @capacitor/ios@6.2.0
-
-├── @capacitor/status-bar@6.0.2
-
-├── @emotion/react@11.14.0
-
-├── @emotion/styled@11.14.0
-
-├── @eslint/js@9.16.0
-
-├── @mui/icons-material@6.1.10
-
-├── @mui/material@6.1.10
-
-├── @testing-library/jest-dom@6.6.3
-
-├── @testing-library/react@16.1.0
-
-├── @types/crypto-js@4.2.2
-
-├── @types/jest@29.5.14
-
-├── @types/qrcode@1.5.5
-
-├── @types/react-dom@18.3.2
-
-├── @types/react-swipeable@5.2.0
-
-├── @types/react@18.3.14
-
-├── @vitejs/plugin-react@4.3.4
-
-├── bootstrap@5.3.3
-
-├── crypto-js@4.2.0
-
-├── eslint-plugin-react-hooks@5.1.0
-
-├── eslint-plugin-react-refresh@0.4.16
-
-├── eslint@9.16.0
-
-├── globals@15.13.0
-
-├── i18next-browser-languagedetector@8.0.2
-
-├── i18next@24.0.5
-
-├── install@0.13.0
-
-├── jest@29.7.0
-
-├── npm@10.9.2
-
-├── qr-scanner@1.4.2
-
-├── qrcode@1.5.4
-
-├── react-bootstrap@2.10.6
-
-├── react-dom@18.3.1
-
-├── react-i18next@15.1.3
-
-├── react-icons@5.4.0
-
-├── react-qr-scanner@1.0.0-alpha.11
-
-├── react-router-dom@7.0.2
-
-├── react-swipeable@7.0.2
-
-├── react@18.3.1
-
-├── typescript-eslint@8.17.0
-
-├── typescript@5.6.3
-
-└── vite@6.0.3
+<br />├── @capacitor-community/admob@6.1.0
+<br />├── @capacitor/android@6.2.0
+<br />├── @capacitor/cli@6.2.0
+<br />├── @capacitor/core@6.2.0
+<br />├── @capacitor/filesystem@6.0.2
+<br />├── @capacitor/ios@6.2.0
+<br />├── @capacitor/share@6.0.3
+<br />├── @capacitor/status-bar@6.0.2
+<br />├── @emotion/react@11.14.0
+<br />├── @emotion/styled@11.14.0
+<br />├── @eslint/js@9.16.0
+<br />├── @mui/icons-material@6.1.10
+<br />├── @mui/material@6.1.10
+<br />├── @testing-library/jest-dom@6.6.3
+<br />├── @testing-library/react@16.1.0
+<br />├── @types/crypto-js@4.2.2
+<br />├── @types/jest@29.5.14
+<br />├── @types/qrcode@1.5.5
+<br />├── @types/react-dom@18.3.2
+<br />├── @types/react-swipeable@5.2.0
+<br />├── @types/react@18.3.14
+<br />├── @vitejs/plugin-react@4.3.4
+<br />├── bootstrap@5.3.3
+<br />├── crypto-js@4.2.0
+<br />├── eslint-plugin-react-hooks@5.1.0
+<br />├── eslint-plugin-react-refresh@0.4.16
+<br />├── eslint@9.16.0
+<br />├── globals@15.13.0
+<br />├── i18next-browser-languagedetector@8.0.2
+<br />├── i18next@24.0.5
+<br />├── install@0.13.0
+<br />├── jest@29.7.0
+<br />├── npm@10.9.2
+<br />├── qr-scanner@1.4.2
+<br />├── qrcode@1.5.4
+<br />├── react-bootstrap@2.10.6
+<br />├── react-dom@18.3.1
+<br />├── react-i18next@15.1.3
+<br />├── react-icons@5.4.0
+<br />├── react-qr-scanner@1.0.0-alpha.11
+<br />├── react-router-dom@7.0.2
+<br />├── react-swipeable@7.0.2
+<br />├── react@18.3.1
+<br />├── typescript-eslint@8.17.0
+<br />├── typescript@5.6.3
+<br />└── vite@6.0.3

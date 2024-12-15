@@ -6,6 +6,7 @@
     margin-bottom: 16px;
     margin-left: 3vw;
     margin-right: 3vw;
+    margin-top: 3vw;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     cursor: pointer;
     overflow: hidden;
