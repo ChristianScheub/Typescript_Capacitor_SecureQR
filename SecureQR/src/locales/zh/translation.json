@@ -1,0 +1,32 @@
+{
+    "settings_Title": "设置",
+    "settings_DeleteAll": "删除所有数据",
+    "settings_Information": "信息",
+    "settings_Datenschutz": "隐私政策",
+    "settings_Impressum": "法律声明",
+    "settings_GitHubRepo": "GitHub 仓库",
+    "setting_Menu_OpenSourceModulList": "使用的库",
+    "setting_OpenSurceModulListTItle": "使用的 NPM 库",
+    "setting_OpenSourceModulListClose": "关闭",
+
+    "generatorView_textToEncryptField": "文本",
+    "generatorView_textToEncryptFieldHelper": "要加密的文本",
+    "generatorView_PasswordToEncryptField": "密码",
+    "generatorView_PasswordToEncryptFieldHelper": "用于加密文本的密码",
+    "generatorView_TitleGenerateQrCode": "二维码数据",
+    "generatorView_ButtonGenerateQrCode": "生成二维码",
+    "generatorView_TitleGeneratedQR": "生成的二维码",
+    "generatorView_DownloadGeneratedQR": "下载二维码",
+    "generatorView_EncryptionOptionsMethods": "加密方法",
+    "generatorContainer_PopupNoTextPassword": "请输入文本和密码",
+    "generatorContainer_NoQrCodeDownload": "没有可用的二维码",
+
+    "readerView_Titel": "QR 阅读器和解密",
+    "readerView_EncryptionOptionsMethods": "解密方法",
+    "readerView_EncryptedText": "扫描的文本（加密）",
+    "readerView_DecryptedText": "解密文本",
+    "readerView_ButtonNewScan": "重新扫描",
+    "readerContainer_noPasswortEntered": "未输入密码。",
+    "readerContainer_ScanPasswordPrompt": "请输入密码：",
+    "popup_error": "发生错误，请重试！"
+}

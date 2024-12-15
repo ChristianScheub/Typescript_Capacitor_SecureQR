@@ -1,0 +1,17 @@
+.card-container {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}

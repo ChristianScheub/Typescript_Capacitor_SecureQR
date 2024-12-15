@@ -1,0 +1,58 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 3em;
+    width: 100%;
+    background-color: #3d6868;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    padding-top: calc(env(safe-area-inset-top) + 2vh);
+  }
+  
+  .navbarElement {
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #6c757d;
+    background-color: #3d6868;
+    height: 4em;
+    margin-bottom: 10vw;
+    z-index: 9000;
+  }
+  
+  .desktop .navbarContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4em;
+    width: 100%;
+    background-color: #3d6868;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding-top: calc(env(safe-area-inset-top) + 2vh);
+  }
+  
+  .desktop .nativeApp .navbarContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 6em;
+    width: 100%;
+    background-color: #3d6868;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding-top: calc(env(safe-area-inset-top) + 2vh);
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 4vw;
+  }

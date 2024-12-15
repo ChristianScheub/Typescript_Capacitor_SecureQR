@@ -1,0 +1,38 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.card {
+  padding: 2em;
+}
+.password-submit-btn {
+  padding: 10px;
+  background-color: #1c4b46;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.width100{
+  width: 100%;
+}
+
+.makeItCenter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.scrollable-text {
+  overflow-y: auto;
+  word-wrap: break-word;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.fillScreen {
+  height: 90vh;
+}

@@ -1,0 +1,32 @@
+{
+    "settings_Title": "설정",
+    "settings_DeleteAll": "모든 데이터 삭제",
+    "settings_Information": "정보",
+    "settings_Datenschutz": "개인정보 보호정책",
+    "settings_Impressum": "법적 공지",
+    "settings_GitHubRepo": "GitHub 리포지토리",
+    "setting_Menu_OpenSourceModulList": "사용된 라이브러리",
+    "setting_OpenSurceModulListTItle": "사용된 NPM 라이브러리",
+    "setting_OpenSourceModulListClose": "닫기",
+
+    "generatorView_textToEncryptField": "텍스트",
+    "generatorView_textToEncryptFieldHelper": "암호화할 텍스트",
+    "generatorView_PasswordToEncryptField": "비밀번호",
+    "generatorView_PasswordToEncryptFieldHelper": "텍스트 암호화를 위한 비밀번호",
+    "generatorView_TitleGenerateQrCode": "QR 코드 데이터",
+    "generatorView_ButtonGenerateQrCode": "QR 코드 생성",
+    "generatorView_TitleGeneratedQR": "생성된 QR 코드",
+    "generatorView_DownloadGeneratedQR": "QR 코드 다운로드",
+    "generatorView_EncryptionOptionsMethods": "암호화 방법",
+    "generatorContainer_PopupNoTextPassword": "텍스트와 비밀번호를 입력해주세요",
+    "generatorContainer_NoQrCodeDownload": "사용 가능한 QR 코드가 없습니다",
+
+    "readerView_Titel": "QR 리더 및 해독",
+    "readerView_EncryptionOptionsMethods": "해독 방법",
+    "readerView_EncryptedText": "스캔된 텍스트 (암호화됨)",
+    "readerView_DecryptedText": "해독된 텍스트",
+    "readerView_ButtonNewScan": "새 스캔",
+    "readerContainer_noPasswortEntered": "비밀번호가 입력되지 않았습니다.",
+    "readerContainer_ScanPasswordPrompt": "비밀번호를 입력하세요:",
+    "popup_error": "오류가 발생했습니다. 다시 시도해주세요!"
+}

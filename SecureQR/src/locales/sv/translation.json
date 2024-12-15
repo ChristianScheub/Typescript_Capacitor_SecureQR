@@ -1,0 +1,32 @@
+{
+  "settings_Title": "Inställningar",
+  "settings_DeleteAll": "Ta bort all data",
+  "settings_Information": "Information",
+  "settings_Datenschutz": "Sekretesspolicy",
+  "settings_Impressum": "Impressum",
+  "settings_GitHubRepo": "GitHub Repository",
+  "setting_Menu_OpenSourceModulList": "Använda bibliotek",
+  "setting_OpenSurceModulListTItle": "Använda NPM-bibliotek",
+  "setting_OpenSourceModulListClose": "Stäng",
+
+  "generatorView_textToEncryptField": "Text",
+  "generatorView_textToEncryptFieldHelper": "Text att kryptera",
+  "generatorView_PasswordToEncryptField": "Lösenord",
+  "generatorView_PasswordToEncryptFieldHelper": "Lösenord för att kryptera text",
+  "generatorView_TitleGenerateQrCode": "Data för QR-kod",
+  "generatorView_ButtonGenerateQrCode": "Generera QR-kod",
+  "generatorView_TitleGeneratedQR": "Genererad QR-kod",
+  "generatorView_DownloadGeneratedQR": "Ladda ner QR-kod",
+  "generatorView_EncryptionOptionsMethods": "Krypteringsmetod",
+  "generatorContainer_PopupNoTextPassword": "Ange text och lösenord",
+  "generatorContainer_NoQrCodeDownload": "Ingen QR-kod tillgänglig",
+
+  "readerView_Titel": "QR-läsare & avkodning",
+  "readerView_EncryptionOptionsMethods": "Avkodningsmetod",
+  "readerView_EncryptedText": "Skannad text (krypterad)",
+  "readerView_DecryptedText": "Avkodad text",
+  "readerView_ButtonNewScan": "Ny skanning",
+  "readerContainer_noPasswortEntered": "Inget lösenord angivet.",
+  "readerContainer_ScanPasswordPrompt": "Ange lösenord:",
+  "popup_error": "Ett fel uppstod, försök igen!"
+}

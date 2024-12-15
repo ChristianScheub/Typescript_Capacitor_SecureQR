@@ -1,0 +1,32 @@
+{
+  "settings_Title": "Instellingen",
+  "settings_DeleteAll": "Verwijder alle gegevens",
+  "settings_Information": "Informatie",
+  "settings_Datenschutz": "Privacybeleid",
+  "settings_Impressum": "Colofon",
+  "settings_GitHubRepo": "GitHub Repository",
+  "setting_Menu_OpenSourceModulList": "Gebruikte bibliotheken",
+  "setting_OpenSurceModulListTItle": "Gebruikte NPM-bibliotheken",
+  "setting_OpenSourceModulListClose": "Sluiten",
+
+  "generatorView_textToEncryptField": "Tekst",
+  "generatorView_textToEncryptFieldHelper": "Tekst om te versleutelen",
+  "generatorView_PasswordToEncryptField": "Wachtwoord",
+  "generatorView_PasswordToEncryptFieldHelper": "Wachtwoord voor het versleutelen van de tekst",
+  "generatorView_TitleGenerateQrCode": "Gegevens voor QR-code",
+  "generatorView_ButtonGenerateQrCode": "Genereer QR-code",
+  "generatorView_TitleGeneratedQR": "Gegenereerde QR-code",
+  "generatorView_DownloadGeneratedQR": "Download QR-code",
+  "generatorView_EncryptionOptionsMethods": "Versleutelingsmethode",
+  "generatorContainer_PopupNoTextPassword": "Voer tekst en wachtwoord in",
+  "generatorContainer_NoQrCodeDownload": "Geen QR-code beschikbaar",
+
+  "readerView_Titel": "QR Lezer & Ontsleuteling",
+  "readerView_EncryptionOptionsMethods": "Ontsleutelmethode",
+  "readerView_EncryptedText": "Gescanste tekst (versleuteld)",
+  "readerView_DecryptedText": "Ontsleutelde tekst",
+  "readerView_ButtonNewScan": "Nieuw scan",
+  "readerContainer_noPasswortEntered": "Geen wachtwoord ingevoerd.",
+  "readerContainer_ScanPasswordPrompt": "Voer het wachtwoord in:",
+  "popup_error": "Er is een fout opgetreden, probeer opnieuw!"
+}

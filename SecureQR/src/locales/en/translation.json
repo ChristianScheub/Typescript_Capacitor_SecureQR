@@ -1,0 +1,32 @@
+{
+    "settings_Title": "Settings",
+    "settings_DeleteAll": "Delete all data",
+    "settings_Information": "Information",
+    "settings_Datenschutz": "Privacy Policy",
+    "settings_Impressum": "Imprint",
+    "settings_GitHubRepo": "GitHub Repository",
+    "setting_Menu_OpenSourceModulList": "Used Libraries",
+    "setting_OpenSurceModulListTItle": "Used NPM Libraries",
+    "setting_OpenSourceModulListClose": "Close",
+
+    "generatorView_textToEncryptField": "Text",
+    "generatorView_textToEncryptFieldHelper": "Text to encrypt",
+    "generatorView_PasswordToEncryptField": "Password",
+    "generatorView_PasswordToEncryptFieldHelper": "Password for encrypting the text",
+    "generatorView_TitleGenerateQrCode": "Data for QR Code",
+    "generatorView_ButtonGenerateQrCode": "Generate QR Code",
+    "generatorView_TitleGeneratedQR": "Generated QR Code",
+    "generatorView_DownloadGeneratedQR": "Download QR Code",
+    "generatorView_EncryptionOptionsMethods": "Encryption Method",
+    "generatorContainer_PopupNoTextPassword": "Please enter text and password",
+    "generatorContainer_NoQrCodeDownload": "No QR Code available",
+
+    "readerView_Titel": "QR Reader & Decryption",
+    "readerView_EncryptionOptionsMethods": "Decryption Method",
+    "readerView_EncryptedText": "Scanned Text (Encrypted)",
+    "readerView_DecryptedText": "Decrypted Text",
+    "readerView_ButtonNewScan": "New Scan",
+    "readerContainer_noPasswortEntered": "No password entered.",
+    "readerContainer_ScanPasswordPrompt": "Please enter the password:",
+    "popup_error": "An error occurred, please try again!"
+}

@@ -1,0 +1,32 @@
+{
+    "settings_Title": "設定",
+    "settings_DeleteAll": "すべてのデータを削除",
+    "settings_Information": "情報",
+    "settings_Datenschutz": "プライバシーポリシー",
+    "settings_Impressum": "法的通知",
+    "settings_GitHubRepo": "GitHub リポジトリ",
+    "setting_Menu_OpenSourceModulList": "使用ライブラリ",
+    "setting_OpenSurceModulListTItle": "使用 NPM ライブラリ",
+    "setting_OpenSourceModulListClose": "閉じる",
+
+    "generatorView_textToEncryptField": "テキスト",
+    "generatorView_textToEncryptFieldHelper": "暗号化するテキスト",
+    "generatorView_PasswordToEncryptField": "パスワード",
+    "generatorView_PasswordToEncryptFieldHelper": "テキストを暗号化するためのパスワード",
+    "generatorView_TitleGenerateQrCode": "QRコード用データ",
+    "generatorView_ButtonGenerateQrCode": "QRコードを生成",
+    "generatorView_TitleGeneratedQR": "生成されたQRコード",
+    "generatorView_DownloadGeneratedQR": "QRコードをダウンロード",
+    "generatorView_EncryptionOptionsMethods": "暗号化方法",
+    "generatorContainer_PopupNoTextPassword": "テキストとパスワードを入力してください",
+    "generatorContainer_NoQrCodeDownload": "利用可能なQRコードがありません",
+
+    "readerView_Titel": "QRリーダーと復号化",
+    "readerView_EncryptionOptionsMethods": "復号化方法",
+    "readerView_EncryptedText": "スキャンされたテキスト（暗号化済み）",
+    "readerView_DecryptedText": "復号化されたテキスト",
+    "readerView_ButtonNewScan": "新しいスキャン",
+    "readerContainer_noPasswortEntered": "パスワードが入力されていません。",
+    "readerContainer_ScanPasswordPrompt": "パスワードを入力してください：",
+    "popup_error": "エラーが発生しました。もう一度お試しください！"
+}

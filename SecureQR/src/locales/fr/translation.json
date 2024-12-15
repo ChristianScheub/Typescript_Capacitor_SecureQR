@@ -1,0 +1,32 @@
+{
+    "settings_Title": "Paramètres",
+    "settings_DeleteAll": "Supprimer toutes les données",
+    "settings_Information": "Informations",
+    "settings_Datenschutz": "Politique de confidentialité",
+    "settings_Impressum": "Mentions légales",
+    "settings_GitHubRepo": "Répertoire GitHub",
+    "setting_Menu_OpenSourceModulList": "Bibliothèques utilisées",
+    "setting_OpenSurceModulListTItle": "Bibliothèques NPM utilisées",
+    "setting_OpenSourceModulListClose": "Fermer",
+
+    "generatorView_textToEncryptField": "Texte",
+    "generatorView_textToEncryptFieldHelper": "Texte à chiffrer",
+    "generatorView_PasswordToEncryptField": "Mot de passe",
+    "generatorView_PasswordToEncryptFieldHelper": "Mot de passe pour chiffrer le texte",
+    "generatorView_TitleGenerateQrCode": "Données pour le code QR",
+    "generatorView_ButtonGenerateQrCode": "Générer le code QR",
+    "generatorView_TitleGeneratedQR": "Code QR généré",
+    "generatorView_DownloadGeneratedQR": "Télécharger le code QR",
+    "generatorView_EncryptionOptionsMethods": "Méthode de chiffrement",
+    "generatorContainer_PopupNoTextPassword": "Veuillez entrer le texte et le mot de passe",
+    "generatorContainer_NoQrCodeDownload": "Aucun code QR disponible",
+
+    "readerView_Titel": "Lecteur QR & décryptage",
+    "readerView_EncryptionOptionsMethods": "Méthode de décryptage",
+    "readerView_EncryptedText": "Texte scanné (Chiffré)",
+    "readerView_DecryptedText": "Texte déchiffré",
+    "readerView_ButtonNewScan": "Nouvelle analyse",
+    "readerContainer_noPasswortEntered": "Aucun mot de passe entré.",
+    "readerContainer_ScanPasswordPrompt": "Veuillez entrer le mot de passe :",
+    "popup_error": "Une erreur est survenue, veuillez réessayer !"
+}

@@ -1,0 +1,34 @@
+{
+    "settings_Title": "Einstellungen",
+    "settings_DeleteAll": "Alle Daten löschen",
+    "settings_Information": "Informationen",
+    "settings_Datenschutz": "Datenschutz",
+    "settings_Impressum": "Impressum",
+    "settings_GitHubRepo": "GitHub Repository",
+    "setting_Menu_OpenSourceModulList": "Verwendete Bibilotheken",
+    "setting_OpenSurceModulListTItle": "Verwendete NPM Bibilotheken",
+    "setting_OpenSourceModulListClose": "Schließen",
+
+    "generatorView_textToEncryptField": "Text",
+    "generatorView_textToEncryptFieldHelper": "Text zum verschlüsseln",
+    "generatorView_PasswordToEncryptField": "Passwort",
+    "generatorView_PasswordToEncryptFieldHelper": "Passwort für die Verschlüsselung des Textes",
+    "generatorView_TitleGenerateQrCode": "Daten für den QR Code",
+    "generatorView_ButtonGenerateQrCode": "QR Code generieren",
+    "generatorView_TitleGeneratedQR": "Generierter QR Code",
+    "generatorView_DownloadGeneratedQR": "Download QR Code",
+    "generatorView_EncryptionOptionsMethods": "Verschlüsselungsmethode",
+    "generatorContainer_PopupNoTextPassword": "Bitte Text und Passwort eingeben",
+    "generatorContainer_NoQrCodeDownload": "Kein QR Code vorhanden",
+
+
+
+    "readerView_Titel": "QR Reader & Entschlüsselung",
+    "readerView_EncryptionOptionsMethods": "Entschlüsselungsmethode",
+    "readerView_EncryptedText": "Eingescannter Text (Verschlüsselt)",
+    "readerView_DecryptedText": "Entschlüsselter Text",
+    "readerView_ButtonNewScan": "Neuer Scan",
+    "readerContainer_noPasswortEntered": "Kein Passwort eingegeben.",
+    "readerContainer_ScanPasswordPrompt": "Bitte geben Sie das Passwort ein:",
+    "popup_error": "Es trat ein Fehler auf, bitte erneut versuchen!"
+}

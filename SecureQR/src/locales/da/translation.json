@@ -1,0 +1,32 @@
+{
+  "settings_Title": "Indstillinger",
+  "settings_DeleteAll": "Slet alle data",
+  "settings_Information": "Information",
+  "settings_Datenschutz": "Privatlivspolitik",
+  "settings_Impressum": "Impressum",
+  "settings_GitHubRepo": "GitHub Repository",
+  "setting_Menu_OpenSourceModulList": "Anvendte biblioteker",
+  "setting_OpenSurceModulListTItle": "Anvendte NPM-biblioteker",
+  "setting_OpenSourceModulListClose": "Luk",
+
+  "generatorView_textToEncryptField": "Tekst",
+  "generatorView_textToEncryptFieldHelper": "Tekst til kryptering",
+  "generatorView_PasswordToEncryptField": "Adgangskode",
+  "generatorView_PasswordToEncryptFieldHelper": "Adgangskode til at kryptere teksten",
+  "generatorView_TitleGenerateQrCode": "Data til QR-kode",
+  "generatorView_ButtonGenerateQrCode": "Generér QR-kode",
+  "generatorView_TitleGeneratedQR": "Genereret QR-kode",
+  "generatorView_DownloadGeneratedQR": "Download QR-kode",
+  "generatorView_EncryptionOptionsMethods": "Krypteringsmetode",
+  "generatorContainer_PopupNoTextPassword": "Indtast tekst og adgangskode",
+  "generatorContainer_NoQrCodeDownload": "Ingen QR-kode tilgængelig",
+
+  "readerView_Titel": "QR-læser & dekryptering",
+  "readerView_EncryptionOptionsMethods": "Dekrypteringsmetode",
+  "readerView_EncryptedText": "Scannet tekst (krypteret)",
+  "readerView_DecryptedText": "Dekrypteret tekst",
+  "readerView_ButtonNewScan": "Ny scanning",
+  "readerContainer_noPasswortEntered": "Ingen adgangskode angivet.",
+  "readerContainer_ScanPasswordPrompt": "Indtast adgangskode:",
+  "popup_error": "Der opstod en fejl, prøv igen!"
+}

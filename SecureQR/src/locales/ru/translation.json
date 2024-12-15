@@ -1,0 +1,32 @@
+{
+  "settings_Title": "Настройки",
+  "settings_DeleteAll": "Удалить все данные",
+  "settings_Information": "Информация",
+  "settings_Datenschutz": "Политика конфиденциальности",
+  "settings_Impressum": "Отпечаток",
+  "settings_GitHubRepo": "Репозиторий GitHub",
+  "setting_Menu_OpenSourceModulList": "Используемые библиотеки",
+  "setting_OpenSurceModulListTItle": "Используемые NPM-библиотеки",
+  "setting_OpenSourceModulListClose": "Закрыть",
+
+  "generatorView_textToEncryptField": "Текст",
+  "generatorView_textToEncryptFieldHelper": "Текст для шифрования",
+  "generatorView_PasswordToEncryptField": "Пароль",
+  "generatorView_PasswordToEncryptFieldHelper": "Пароль для шифрования текста",
+  "generatorView_TitleGenerateQrCode": "Данные для QR-кода",
+  "generatorView_ButtonGenerateQrCode": "Создать QR-код",
+  "generatorView_TitleGeneratedQR": "Созданный QR-код",
+  "generatorView_DownloadGeneratedQR": "Скачать QR-код",
+  "generatorView_EncryptionOptionsMethods": "Метод шифрования",
+  "generatorContainer_PopupNoTextPassword": "Пожалуйста, введите текст и пароль",
+  "generatorContainer_NoQrCodeDownload": "Нет доступного QR-кода",
+
+  "readerView_Titel": "Сканер QR & Дешифратор",
+  "readerView_EncryptionOptionsMethods": "Метод дешифровки",
+  "readerView_EncryptedText": "Сканированный текст (зашифрованный)",
+  "readerView_DecryptedText": "Дешифрованный текст",
+  "readerView_ButtonNewScan": "Новый скан",
+  "readerContainer_noPasswortEntered": "Не введен пароль.",
+  "readerContainer_ScanPasswordPrompt": "Пожалуйста, введите пароль:",
+  "popup_error": "Произошла ошибка, попробуйте снова!"
+}

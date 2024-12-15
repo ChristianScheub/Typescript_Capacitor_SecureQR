@@ -1,0 +1,32 @@
+{
+  "settings_Title": "Asetukset",
+  "settings_DeleteAll": "Poista kaikki tiedot",
+  "settings_Information": "Tietoa",
+  "settings_Datenschutz": "Tietosuojakäytäntö",
+  "settings_Impressum": "Painatustiedot",
+  "settings_GitHubRepo": "GitHub-repositorio",
+  "setting_Menu_OpenSourceModulList": "Käytetyt kirjastot",
+  "setting_OpenSurceModulListTItle": "Käytetyt NPM-kirjastot",
+  "setting_OpenSourceModulListClose": "Sulje",
+
+  "generatorView_textToEncryptField": "Teksti",
+  "generatorView_textToEncryptFieldHelper": "Teksti salaukseen",
+  "generatorView_PasswordToEncryptField": "Salasana",
+  "generatorView_PasswordToEncryptFieldHelper": "Salasana tekstin salaamiseen",
+  "generatorView_TitleGenerateQrCode": "QR-koodin tiedot",
+  "generatorView_ButtonGenerateQrCode": "Generoi QR-koodi",
+  "generatorView_TitleGeneratedQR": "Luotu QR-koodi",
+  "generatorView_DownloadGeneratedQR": "Lataa QR-koodi",
+  "generatorView_EncryptionOptionsMethods": "Salausmenetelmä",
+  "generatorContainer_PopupNoTextPassword": "Syötä teksti ja salasana",
+  "generatorContainer_NoQrCodeDownload": "QR-koodia ei ole saatavilla",
+
+  "readerView_Titel": "QR-lukija & salauksen purku",
+  "readerView_EncryptionOptionsMethods": "Salauksen purkumenetelmä",
+  "readerView_EncryptedText": "Skannattu teksti (salattu)",
+  "readerView_DecryptedText": "Salauksen purettu teksti",
+  "readerView_ButtonNewScan": "Uusi skannaus",
+  "readerContainer_noPasswortEntered": "Salasana ei ole syötetty.",
+  "readerContainer_ScanPasswordPrompt": "Syötä salasana:",
+  "popup_error": "Tapahtui virhe, yritä uudelleen!"
+}

@@ -1,0 +1,32 @@
+{
+    "settings_Title": "الإعدادات",
+    "settings_DeleteAll": "حذف جميع البيانات",
+    "settings_Information": "معلومات",
+    "settings_Datenschutz": "سياسة الخصوصية",
+    "settings_Impressum": "الإشعار القانوني",
+    "settings_GitHubRepo": "مستودع GitHub",
+    "setting_Menu_OpenSourceModulList": "المكتبات المستخدمة",
+    "setting_OpenSurceModulListTItle": "مكتبات NPM المستخدمة",
+    "setting_OpenSourceModulListClose": "إغلاق",
+
+    "generatorView_textToEncryptField": "النص",
+    "generatorView_textToEncryptFieldHelper": "النص المراد تشفيره",
+    "generatorView_PasswordToEncryptField": "كلمة المرور",
+    "generatorView_PasswordToEncryptFieldHelper": "كلمة المرور لتشفير النص",
+    "generatorView_TitleGenerateQrCode": "بيانات رمز الاستجابة السريعة",
+    "generatorView_ButtonGenerateQrCode": "إنشاء رمز QR",
+    "generatorView_TitleGeneratedQR": "رمز QR المُنشأ",
+    "generatorView_DownloadGeneratedQR": "تنزيل رمز QR",
+    "generatorView_EncryptionOptionsMethods": "طريقة التشفير",
+    "generatorContainer_PopupNoTextPassword": "يرجى إدخال النص وكلمة المرور",
+    "generatorContainer_NoQrCodeDownload": "لا يوجد رمز QR متاح",
+
+    "readerView_Titel": "قارئ QR وفك التشفير",
+    "readerView_EncryptionOptionsMethods": "طريقة فك التشفير",
+    "readerView_EncryptedText": "النص الممسوح ضوئيًا (مشفر)",
+    "readerView_DecryptedText": "النص المفكك تشفيره",
+    "readerView_ButtonNewScan": "مسح جديد",
+    "readerContainer_noPasswortEntered": "لم يتم إدخال كلمة مرور.",
+    "readerContainer_ScanPasswordPrompt": "يرجى إدخال كلمة المرور:",
+    "popup_error": "حدث خطأ، يرجى المحاولة مرة أخرى!"
+}

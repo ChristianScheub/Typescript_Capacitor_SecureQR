@@ -1,0 +1,32 @@
+{
+    "settings_Title": "सेटिंग्स",
+    "settings_DeleteAll": "सभी डेटा हटाएं",
+    "settings_Information": "जानकारी",
+    "settings_Datenschutz": "गोपनीयता नीति",
+    "settings_Impressum": "कानूनी सूचना",
+    "settings_GitHubRepo": "GitHub रिपॉजिटरी",
+    "setting_Menu_OpenSourceModulList": "उपयोग की गई लाइब्रेरीज़",
+    "setting_OpenSurceModulListTItle": "उपयोग की गई NPM लाइब्रेरीज़",
+    "setting_OpenSourceModulListClose": "बंद करें",
+
+    "generatorView_textToEncryptField": "पाठ",
+    "generatorView_textToEncryptFieldHelper": "एन्क्रिप्ट करने के लिए पाठ",
+    "generatorView_PasswordToEncryptField": "पासवर्ड",
+    "generatorView_PasswordToEncryptFieldHelper": "पाठ एन्क्रिप्ट करने के लिए पासवर्ड",
+    "generatorView_TitleGenerateQrCode": "QR कोड के लिए डेटा",
+    "generatorView_ButtonGenerateQrCode": "QR कोड उत्पन्न करें",
+    "generatorView_TitleGeneratedQR": "उत्पन्न QR कोड",
+    "generatorView_DownloadGeneratedQR": "QR कोड डाउनलोड करें",
+    "generatorView_EncryptionOptionsMethods": "एन्क्रिप्शन विधि",
+    "generatorContainer_PopupNoTextPassword": "कृपया पाठ और पासवर्ड दर्ज करें",
+    "generatorContainer_NoQrCodeDownload": "कोई QR कोड उपलब्ध नहीं है",
+
+    "readerView_Titel": "QR रीडर और डिक्रिप्शन",
+    "readerView_EncryptionOptionsMethods": "डिक्रिप्शन विधि",
+    "readerView_EncryptedText": "स्कैन किया गया पाठ (एन्क्रिप्टेड)",
+    "readerView_DecryptedText": "डिक्रिप्टेड पाठ",
+    "readerView_ButtonNewScan": "नया स्कैन",
+    "readerContainer_noPasswortEntered": "कोई पासवर्ड दर्ज नहीं किया गया।",
+    "readerContainer_ScanPasswordPrompt": "कृपया पासवर्ड दर्ज करें:",
+    "popup_error": "एक त्रुटि हुई, कृपया पुनः प्रयास करें!"
+}

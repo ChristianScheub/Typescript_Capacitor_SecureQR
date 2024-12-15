@@ -1,0 +1,32 @@
+{
+    "settings_Title": "Configurações",
+    "settings_DeleteAll": "Deletar todos os dados",
+    "settings_Information": "Informação",
+    "settings_Datenschutz": "Política de Privacidade",
+    "settings_Impressum": "Impressão",
+    "settings_GitHubRepo": "Repositório GitHub",
+    "setting_Menu_OpenSourceModulList": "Bibliotecas usadas",
+    "setting_OpenSurceModulListTItle": "Bibliotecas NPM utilizadas",
+    "setting_OpenSourceModulListClose": "Fechar",
+  
+    "generatorView_textToEncryptField": "Texto",
+    "generatorView_textToEncryptFieldHelper": "Texto para criptografar",
+    "generatorView_PasswordToEncryptField": "Senha",
+    "generatorView_PasswordToEncryptFieldHelper": "Senha para criptografar o texto",
+    "generatorView_TitleGenerateQrCode": "Dados para QR Code",
+    "generatorView_ButtonGenerateQrCode": "Gerar QR Code",
+    "generatorView_TitleGeneratedQR": "QR Code Gerado",
+    "generatorView_DownloadGeneratedQR": "Baixar QR Code",
+    "generatorView_EncryptionOptionsMethods": "Método de Criptografia",
+    "generatorContainer_PopupNoTextPassword": "Por favor, insira texto e senha",
+    "generatorContainer_NoQrCodeDownload": "Nenhum QR Code disponível",
+  
+    "readerView_Titel": "Leitor & Descriptografador de QR",
+    "readerView_EncryptionOptionsMethods": "Método de Descriptografia",
+    "readerView_EncryptedText": "Texto Escaneado (Criptografado)",
+    "readerView_DecryptedText": "Texto Descriptografado",
+    "readerView_ButtonNewScan": "Novo Escaneamento",
+    "readerContainer_noPasswortEntered": "Nenhuma senha digitada.",
+    "readerContainer_ScanPasswordPrompt": "Por favor, insira a senha:",
+    "popup_error": "Ocorreu um erro, tente novamente!"
+  }
