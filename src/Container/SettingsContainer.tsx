@@ -13,12 +13,10 @@ const ContainerSettings: React.FC = () => {
 
 
   return (
-    <>
       <SettingsView
         onDatenschutzClick={handleDatenschutzClick}
         onImpressumClick={handleImpressumClick}
       />
-    </>
   );
 };
 

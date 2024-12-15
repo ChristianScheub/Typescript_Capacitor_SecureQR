@@ -68,7 +68,6 @@ export const QRGeneratorContainer: React.FC = () => {
   };
 
   return (
-    <>
       <QRGeneratorView
         text={text}
         password={password}
@@ -80,6 +79,5 @@ export const QRGeneratorContainer: React.FC = () => {
         onGenerateQRCode={generateQRCode}
         onDownloadQRCode={downloadQRCode}
       />
-    </>
   );
 };
