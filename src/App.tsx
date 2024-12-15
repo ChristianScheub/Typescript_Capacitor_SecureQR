@@ -8,7 +8,7 @@ import { makeStatusBarTransparent } from "./Services/helper/statusBarUtils";
 import "./i18n";
 import { getRoutes } from "./routes";
 import NavbarView from "./Views/NavBar/NavbarView";
-import { AdBanner } from "./UIComponets/Ads/AdBanner";
+import { AdManager } from "./Services/Ads/AdManager";
 
 const MainApp: React.FC = () => {
   const [activeComponent, setActiveComponent] = useState<string>("home");
@@ -29,7 +29,7 @@ const MainApp: React.FC = () => {
 
   return (
     <>
-      <AdBanner />
+      <AdManager />
       <div {...handlers} style={{ paddingTop: "9vh" }} className={isDesktop ? "desktop" : ""}>
         <NavbarView setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
         {getRoutes()}

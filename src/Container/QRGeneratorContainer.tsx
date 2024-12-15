@@ -8,6 +8,7 @@ import Logger from "../Services/Logger/logger";
 import { AdMob, AdOptions } from "@capacitor-community/admob";
 import { handleImageDownload } from "../Services/FileHandler/fileHandler";
 import { Capacitor } from "@capacitor/core";
+import showAdInterstitial from "../Services/Ads/AdInterstitial";
 
 export const QRGeneratorContainer: React.FC = () => {
   const [text, setText] = useState("");
@@ -29,32 +30,10 @@ export const QRGeneratorContainer: React.FC = () => {
       const encryptedData = encryptionServiceInstance.encrypt(text, password);
       const qr = await QRCode.toDataURL(encryptedData);
       setQrCode(qr);
-      showAdBanner();
+      showAdInterstitial()
     } catch (error) {
       Logger.error("Error generating QR Code: " + error);
       alert(t("popup_error"));
-    }
-  };
-
-  const showAdBanner = async () => {
-    try {
-      let adId: string;
-      if (Capacitor.getPlatform() === "android") {
-        adId = "ca-app-pub-6250689577715326/6053411682";
-      } else if (Capacitor.getPlatform() === "ios") {
-        adId = "ca-app-pub-6250689577715326/2563290057";
-      } else {
-        adId = "ca-app-pub-6250689577715326/6053411682";
-      }
-
-      const options: AdOptions = {
-        adId: adId
-      };
-
-      await AdMob.prepareInterstitial(options);
-      await AdMob.showInterstitial();
-    } catch (error) {
-      Logger.error("Fehler beim Anzeigen des Banners: " + error);
     }
   };
 
