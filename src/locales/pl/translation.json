@@ -28,5 +28,6 @@
   "readerView_ButtonNewScan": "Nowe skanowanie",
   "readerContainer_noPasswortEntered": "Nie wprowadzono hasła.",
   "readerContainer_ScanPasswordPrompt": "Proszę wprowadzić hasło:",
-  "popup_error": "Wystąpił błąd, spróbuj ponownie!"
+  "popup_error": "Wystąpił błąd, spróbuj ponownie!",
+  "qrScanner_waitingCamera": "Ładowanie kamery..."
 }

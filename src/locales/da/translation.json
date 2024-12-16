@@ -28,5 +28,6 @@
   "readerView_ButtonNewScan": "Ny scanning",
   "readerContainer_noPasswortEntered": "Ingen adgangskode angivet.",
   "readerContainer_ScanPasswordPrompt": "Indtast adgangskode:",
-  "popup_error": "Der opstod en fejl, prøv igen!"
+  "popup_error": "Der opstod en fejl, prøv igen!",
+  "qrScanner_waitingCamera": "Indlæser kamera..."
 }

@@ -30,5 +30,6 @@
     "readerView_ButtonNewScan": "Neuer Scan",
     "readerContainer_noPasswortEntered": "Kein Passwort eingegeben.",
     "readerContainer_ScanPasswordPrompt": "Bitte geben Sie das Passwort ein:",
-    "popup_error": "Es trat ein Fehler auf, bitte erneut versuchen!"
+    "popup_error": "Es trat ein Fehler auf, bitte erneut versuchen!",
+    "qrScanner_waitingCamera": "Kamera wird geladen..."
 }

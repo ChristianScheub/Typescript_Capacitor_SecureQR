@@ -28,5 +28,6 @@
     "readerView_ButtonNewScan": "مسح جديد",
     "readerContainer_noPasswortEntered": "لم يتم إدخال كلمة مرور.",
     "readerContainer_ScanPasswordPrompt": "يرجى إدخال كلمة المرور:",
-    "popup_error": "حدث خطأ، يرجى المحاولة مرة أخرى!"
+    "popup_error": "حدث خطأ، يرجى المحاولة مرة أخرى!",
+    "qrScanner_waitingCamera": "تحميل الكاميرا..."
 }

@@ -37,7 +37,7 @@ As a result of the use from the modules there is also one configuration file:
 
 - `app_texts`: Contains texts such as the description, imprint text, data protection text etc.
 
-In addition, the separation is not 100% sharp, partly because of these modules, but also because the final architecture only turned out that way during development.
+In addition, the separation is not 100% sharp, partly because of these modules, but also because the final architecture only turned out that way during development. (Such as the QR Scanner)
 
 `UI-Elements`
 At the topmost level, UI-Elements are the fundamental building blocks of our interface. These are the atomic components that include buttons, input fields, and other basic interactive elements. They are styled and abstracted to be reusable across the application.
@@ -52,6 +52,14 @@ Container-Components serve as the data-fetching and state management layer in ou
 `Service Layer`
 The Service Layer is the foundation of our application's client-side architecture. 
 There is a separate encapsulated service which is responsible for the logging while the development or the encryption service which uses crpyto js. The generic helper methods / hooks also belong there, such as the methods for an transparent status bar or the hook that allows you to swipe through the app.
+ <img src="images/SecureQR_Architecture.png" alt="Architecture Overview">
+ <i>To simplify the display, the App/Routes is hidden. That is why there is no arrow to the NavBar or the Status Bar method, for example.</i>
+
+## Testing
+
+The Jest testing framework is used for testing.
+The tests here are always written in Typescript.
+Since this app was written in less than 20 hours, unit tests were deprioritized, which is why there are only those of components copied from other apps.
 
 ## Available Scripts
 

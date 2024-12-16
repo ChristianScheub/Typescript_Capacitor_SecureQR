@@ -28,5 +28,6 @@
     "readerView_ButtonNewScan": "नया स्कैन",
     "readerContainer_noPasswortEntered": "कोई पासवर्ड दर्ज नहीं किया गया।",
     "readerContainer_ScanPasswordPrompt": "कृपया पासवर्ड दर्ज करें:",
-    "popup_error": "एक त्रुटि हुई, कृपया पुनः प्रयास करें!"
+    "popup_error": "एक त्रुटि हुई, कृपया पुनः प्रयास करें!",
+    "qrScanner_waitingCamera": "कैमरा लोड हो रहा है..."
 }

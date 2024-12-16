@@ -28,5 +28,6 @@
   "readerView_ButtonNewScan": "Новый скан",
   "readerContainer_noPasswortEntered": "Не введен пароль.",
   "readerContainer_ScanPasswordPrompt": "Пожалуйста, введите пароль:",
-  "popup_error": "Произошла ошибка, попробуйте снова!"
+  "popup_error": "Произошла ошибка, попробуйте снова!",
+  "qrScanner_waitingCamera": "Загрузка камеры..."
 }

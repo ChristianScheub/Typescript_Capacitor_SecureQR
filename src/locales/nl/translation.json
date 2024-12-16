@@ -28,5 +28,6 @@
   "readerView_ButtonNewScan": "Nieuw scan",
   "readerContainer_noPasswortEntered": "Geen wachtwoord ingevoerd.",
   "readerContainer_ScanPasswordPrompt": "Voer het wachtwoord in:",
-  "popup_error": "Er is een fout opgetreden, probeer opnieuw!"
+  "popup_error": "Er is een fout opgetreden, probeer opnieuw!",
+  "qrScanner_waitingCamera": "Camera laden..."
 }

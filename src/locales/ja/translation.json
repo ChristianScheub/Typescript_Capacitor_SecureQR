@@ -28,5 +28,6 @@
     "readerView_ButtonNewScan": "新しいスキャン",
     "readerContainer_noPasswortEntered": "パスワードが入力されていません。",
     "readerContainer_ScanPasswordPrompt": "パスワードを入力してください：",
-    "popup_error": "エラーが発生しました。もう一度お試しください！"
+    "popup_error": "エラーが発生しました。もう一度お試しください！",
+    "qrScanner_waitingCamera": "カメラを読み込んでいます..."
 }

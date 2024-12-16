@@ -28,5 +28,7 @@
   "readerView_ButtonNewScan": "Uusi skannaus",
   "readerContainer_noPasswortEntered": "Salasana ei ole syötetty.",
   "readerContainer_ScanPasswordPrompt": "Syötä salasana:",
-  "popup_error": "Tapahtui virhe, yritä uudelleen!"
+  "popup_error": "Tapahtui virhe, yritä uudelleen!",
+  "qrScanner_waitingCamera": "Ladataan kameraa..."
+
 }

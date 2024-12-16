@@ -28,5 +28,6 @@
     "readerView_ButtonNewScan": "Nouvelle analyse",
     "readerContainer_noPasswortEntered": "Aucun mot de passe entré.",
     "readerContainer_ScanPasswordPrompt": "Veuillez entrer le mot de passe :",
-    "popup_error": "Une erreur est survenue, veuillez réessayer !"
+    "popup_error": "Une erreur est survenue, veuillez réessayer !",
+    "qrScanner_waitingCamera": "Chargement de la caméra..."
 }

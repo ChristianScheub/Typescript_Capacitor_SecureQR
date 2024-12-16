@@ -28,5 +28,6 @@
   "readerView_ButtonNewScan": "Nuova scansione",
   "readerContainer_noPasswortEntered": "Nessuna password inserita.",
   "readerContainer_ScanPasswordPrompt": "Inserire la password:",
-  "popup_error": "Si è verificato un errore, riprovare!"
+  "popup_error": "Si è verificato un errore, riprovare!",
+  "qrScanner_waitingCamera": "Caricamento della fotocamera..."
 }

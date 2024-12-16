@@ -28,5 +28,6 @@
     "readerView_ButtonNewScan": "重新扫描",
     "readerContainer_noPasswortEntered": "未输入密码。",
     "readerContainer_ScanPasswordPrompt": "请输入密码：",
-    "popup_error": "发生错误，请重试！"
+    "popup_error": "发生错误，请重试！",
+    "qrScanner_waitingCamera": "加载摄像头..."
 }

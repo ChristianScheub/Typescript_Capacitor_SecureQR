@@ -28,5 +28,6 @@
     "readerView_ButtonNewScan": "Novo Escaneamento",
     "readerContainer_noPasswortEntered": "Nenhuma senha digitada.",
     "readerContainer_ScanPasswordPrompt": "Por favor, insira a senha:",
-    "popup_error": "Ocorreu um erro, tente novamente!"
+    "popup_error": "Ocorreu um erro, tente novamente!",
+    "qrScanner_waitingCamera": "Carregando a câmera..."
   }
