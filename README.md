@@ -13,6 +13,12 @@ Language: Typescript React Capacitor with Vite<br>
 
 Secure QR is a practical application for encrypting texts such as passwords and generating a QR code. This can then be decrypted again using the app.
 
+Google Play Store: https://play.google.com/store/apps/details?id=de.scheub.secureqr&pli=1
+
+Apple App Store: https://apps.apple.com/de/app/secure-qr/id6739471935
+
+Galaxy App Store: https://apps.samsung.com/appquery/appDetail.as?appId=de.scheub.secureqr
+
 Deutsche Kurzbeschreibung: Secure QR ist eine praktische Anwendung um Texte wie Passwörter zu verschlüsseln und einen QR Code zu generieren. Dieser lässt sich anschließend mit der App wieder entschlüsseln.
 
 ## App Screenshots

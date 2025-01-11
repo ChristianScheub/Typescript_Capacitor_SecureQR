@@ -15,7 +15,7 @@ import { Capacitor } from "@capacitor/core";
       adId: adId,
       adSize: BannerAdSize.BANNER,
       position: BannerAdPosition.BOTTOM_CENTER,
-      margin: 0
+      margin: 0,
     };
     await AdMob.showBanner(options);
   };

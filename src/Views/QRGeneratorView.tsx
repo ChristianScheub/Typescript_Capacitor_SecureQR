@@ -88,6 +88,7 @@ export const QRGeneratorView: React.FC<QRGeneratorViewProps> = ({
           </Button>
         </Card>
       )}
+      <br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   );
 };
