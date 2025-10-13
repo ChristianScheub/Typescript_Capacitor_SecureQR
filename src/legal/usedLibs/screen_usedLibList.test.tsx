@@ -38,13 +38,16 @@ describe("UsedLibListScreen", () => {
   });
 
   test("closing modal works correctly", async () => {
-    render(<UsedLibListScreen open={true} handleClose={() => {}} npmModules={mockNpmModules} />);
+    const handleClose = jest.fn();
+    render(<UsedLibListScreen open={true} handleClose={handleClose} npmModules={mockNpmModules} />);
 
-    fireEvent.click(screen.getByTestId("usedLib_Open_Btn"));
+    // Modal should be open
+    expect(screen.getByTestId("used-lib-list-modal")).toBeInTheDocument();
+    
+    // Click close button
     fireEvent.click(screen.getByTestId("close-btn-lib-list-modal"));
 
-    await waitFor(() => {
-      expect(screen.queryByTestId("used-lib-list-modal")).toBeNull();
-    });
+    // handleClose should be called
+    expect(handleClose).toHaveBeenCalled();
   });
 });
