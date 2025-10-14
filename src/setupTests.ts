@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import '@testing-library/jest-dom';
 
 // Polyfill TextEncoder/TextDecoder for jsdom
