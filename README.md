@@ -4,8 +4,9 @@ Language: Typescript React Capacitor with Vite<br>
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR) 
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
- [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
 
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR) 
@@ -128,6 +129,27 @@ Tests are configured via `jest.config.cjs` with:
 - React Testing Library integration
 - Mocking of Capacitor plugins (Filesystem, Share, StatusBar, AdMob)
 - Coverage thresholds set to 60% (easily exceeded by actual coverage)
+
+### Continuous Integration & Code Quality
+
+#### SonarCloud Integration
+
+The project uses SonarCloud for automated code quality analysis and test coverage tracking. The integration is configured via:
+
+- **Configuration File**: `sonar-project.properties` - Defines SonarCloud settings including coverage paths and exclusions
+- **GitHub Action**: `.github/workflows/sonarcloud.yml` - Automatically runs tests and uploads coverage on every push and pull request
+- **Coverage Upload**: Jest generates LCOV coverage reports that are automatically uploaded to SonarCloud
+
+**Badges and Metrics:**
+- Quality Gate Status
+- Security Rating
+- Code Coverage
+- Duplicated Lines Density
+- Bugs, Code Smells, and Vulnerabilities
+
+The SonarCloud dashboard provides detailed insights into code quality metrics, security vulnerabilities, and test coverage trends over time.
+
+**View the full analysis:** [SonarCloud Dashboard](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
 
 ## Available Scripts
 
