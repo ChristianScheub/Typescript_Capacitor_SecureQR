@@ -61,46 +61,27 @@ describe('fileHandler', () => {
       const error = new Error('Filesystem error');
       (Filesystem.writeFile as jest.Mock).mockRejectedValue(error);
 
-      // Mock DOM methods for fallback
-      const mockLink = {
-        href: '',
-        download: '',
-        click: jest.fn(),
-      } as unknown as HTMLAnchorElement;
-      jest.spyOn(document, 'createElement').mockReturnValue(mockLink);
-      jest.spyOn(document.body, 'appendChild').mockImplementation();
-      jest.spyOn(document.body, 'removeChild').mockImplementation();
-      
-      // Mock URL methods in jsdom
-      global.URL.createObjectURL = jest.fn(() => 'blob:mock-url');
-      global.URL.revokeObjectURL = jest.fn();
+      const { setupDownloadLinkMocks } = require('../../test-utils/domMockHelpers');
+      const mocks = setupDownloadLinkMocks();
 
       await handleImageDownload(mockQRCode);
 
       expect(Logger.error).toHaveBeenCalledWith(expect.stringContaining('Error exporting QR Code'));
+      mocks.cleanup();
     });
 
     it('should use fallback download on error', async () => {
       const error = new Error('Filesystem error');
       (Filesystem.writeFile as jest.Mock).mockRejectedValue(error);
 
-      const mockLink = {
-        href: '',
-        download: '',
-        click: jest.fn(),
-      } as unknown as HTMLAnchorElement;
-      const createElementSpy = jest.spyOn(document, 'createElement').mockReturnValue(mockLink);
-      jest.spyOn(document.body, 'appendChild').mockImplementation();
-      jest.spyOn(document.body, 'removeChild').mockImplementation();
-      
-      // Mock URL methods in jsdom
-      global.URL.createObjectURL = jest.fn(() => 'blob:mock-url');
-      global.URL.revokeObjectURL = jest.fn();
+      const { setupDownloadLinkMocks } = require('../../test-utils/domMockHelpers');
+      const mocks = setupDownloadLinkMocks();
 
       await handleImageDownload(mockQRCode);
 
-      expect(createElementSpy).toHaveBeenCalledWith('a');
-      expect(mockLink.click).toHaveBeenCalled();
+      expect(mocks.createElement).toHaveBeenCalledWith('a');
+      expect(mocks.mockLink.click).toHaveBeenCalled();
+      mocks.cleanup();
     });
   });
 });

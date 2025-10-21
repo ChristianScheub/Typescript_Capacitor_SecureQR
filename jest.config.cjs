@@ -19,6 +19,7 @@ module.exports = {
     '!src/UIComponets/**',
     '!src/Views/NavBar/**',
     '!src/legal/app_texts.ts',
+    '!src/test-utils/**',
   ],
   coverageThreshold: {
     global: {

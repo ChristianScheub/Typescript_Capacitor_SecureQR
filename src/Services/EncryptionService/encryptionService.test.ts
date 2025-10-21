@@ -1,43 +1,23 @@
 import { encryptionService } from './encryptionService';
 import { EncryptionMethod } from '../../types/EncryptionMethod.types';
+import { runStandardEncryptionTests, testServiceMethodAvailability } from '../../test-utils/encryptionTestHelpers';
 
 describe('EncryptionService', () => {
   const testData = 'Hello, World!';
   const testPassword = 'securePassword123';
   
   describe('AES256 Encryption', () => {
-    let service: ReturnType<typeof encryptionService.getService>;
-
-    beforeEach(() => {
-      service = encryptionService.getService(EncryptionMethod.AES256);
-    });
-
-    it('should encrypt data', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      expect(encrypted).toBeDefined();
-      expect(encrypted).not.toBe(testData);
-      expect(encrypted.length).toBeGreaterThan(0);
-    });
-
-    it('should decrypt data correctly', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      const decrypted = service.decrypt(encrypted, testPassword);
-      expect(decrypted).toBe(testData);
-    });
-
-    it('should fail to decrypt with wrong password', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      const decrypted = service.decrypt(encrypted, 'wrongPassword');
-      expect(decrypted).not.toBe(testData);
-    });
+    runStandardEncryptionTests({ method: EncryptionMethod.AES256, testData, testPassword });
 
     it('should handle empty string', () => {
+      const service = encryptionService.getService(EncryptionMethod.AES256);
       const encrypted = service.encrypt('', testPassword);
       const decrypted = service.decrypt(encrypted, testPassword);
       expect(decrypted).toBe('');
     });
 
     it('should handle special characters', () => {
+      const service = encryptionService.getService(EncryptionMethod.AES256);
       const specialData = '!@#$%^&*()_+-=[]{}|;:\'",.<>?/~`';
       const encrypted = service.encrypt(specialData, testPassword);
       const decrypted = service.decrypt(encrypted, testPassword);
@@ -45,6 +25,7 @@ describe('EncryptionService', () => {
     });
 
     it('should handle unicode characters', () => {
+      const service = encryptionService.getService(EncryptionMethod.AES256);
       const unicodeData = '你好世界 🌍 مرحبا';
       const encrypted = service.encrypt(unicodeData, testPassword);
       const decrypted = service.decrypt(encrypted, testPassword);
@@ -53,37 +34,10 @@ describe('EncryptionService', () => {
   });
 
   describe('TripleDES Encryption', () => {
-    let service: ReturnType<typeof encryptionService.getService>;
-
-    beforeEach(() => {
-      service = encryptionService.getService(EncryptionMethod.TripleDES);
-    });
-
-    it('should encrypt data', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      expect(encrypted).toBeDefined();
-      expect(encrypted).not.toBe(testData);
-      expect(encrypted.length).toBeGreaterThan(0);
-    });
-
-    it('should decrypt data correctly', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      const decrypted = service.decrypt(encrypted, testPassword);
-      expect(decrypted).toBe(testData);
-    });
-
-    it('should fail to decrypt with wrong password', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      try {
-        const decrypted = service.decrypt(encrypted, 'wrongPassword');
-        expect(decrypted).not.toBe(testData);
-      } catch (error) {
-        // Wrong password may throw error, which is acceptable
-        expect(error).toBeDefined();
-      }
-    });
+    runStandardEncryptionTests({ method: EncryptionMethod.TripleDES, testData, testPassword });
 
     it('should handle long text', () => {
+      const service = encryptionService.getService(EncryptionMethod.TripleDES);
       const longText = 'A'.repeat(1000);
       const encrypted = service.encrypt(longText, testPassword);
       const decrypted = service.decrypt(encrypted, testPassword);
@@ -92,96 +46,28 @@ describe('EncryptionService', () => {
   });
 
   describe('Blowfish Encryption', () => {
-    let service: ReturnType<typeof encryptionService.getService>;
-
-    beforeEach(() => {
-      service = encryptionService.getService(EncryptionMethod.Blowfish);
-    });
-
-    it('should encrypt data', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      expect(encrypted).toBeDefined();
-      expect(encrypted).not.toBe(testData);
-      expect(encrypted.length).toBeGreaterThan(0);
-    });
-
-    it('should decrypt data correctly', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      const decrypted = service.decrypt(encrypted, testPassword);
-      expect(decrypted).toBe(testData);
-    });
-
-    it('should fail to decrypt with wrong password', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      try {
-        const decrypted = service.decrypt(encrypted, 'wrongPassword');
-        expect(decrypted).not.toBe(testData);
-      } catch (error) {
-        // Wrong password may throw error, which is acceptable
-        expect(error).toBeDefined();
-      }
-    });
+    runStandardEncryptionTests({ method: EncryptionMethod.Blowfish, testData, testPassword });
   });
 
   describe('Rabbit Encryption', () => {
-    let service: ReturnType<typeof encryptionService.getService>;
-
-    beforeEach(() => {
-      service = encryptionService.getService(EncryptionMethod.Rabbit);
-    });
-
-    it('should encrypt data', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      expect(encrypted).toBeDefined();
-      expect(encrypted).not.toBe(testData);
-      expect(encrypted.length).toBeGreaterThan(0);
-    });
-
-    it('should decrypt data correctly', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      const decrypted = service.decrypt(encrypted, testPassword);
-      expect(decrypted).toBe(testData);
-    });
-
-    it('should fail to decrypt with wrong password', () => {
-      const encrypted = service.encrypt(testData, testPassword);
-      try {
-        const decrypted = service.decrypt(encrypted, 'wrongPassword');
-        expect(decrypted).not.toBe(testData);
-      } catch (error) {
-        // Wrong password may throw error, which is acceptable
-        expect(error).toBeDefined();
-      }
-    });
+    runStandardEncryptionTests({ method: EncryptionMethod.Rabbit, testData, testPassword });
   });
 
   describe('getService', () => {
     it('should return AES256 service', () => {
-      const service = encryptionService.getService(EncryptionMethod.AES256);
-      expect(service).toBeDefined();
-      expect(service.encrypt).toBeDefined();
-      expect(service.decrypt).toBeDefined();
+      testServiceMethodAvailability(EncryptionMethod.AES256);
     });
 
     it('should return TripleDES service', () => {
-      const service = encryptionService.getService(EncryptionMethod.TripleDES);
-      expect(service).toBeDefined();
-      expect(service.encrypt).toBeDefined();
-      expect(service.decrypt).toBeDefined();
+      testServiceMethodAvailability(EncryptionMethod.TripleDES);
     });
 
     it('should return Blowfish service', () => {
-      const service = encryptionService.getService(EncryptionMethod.Blowfish);
-      expect(service).toBeDefined();
-      expect(service.encrypt).toBeDefined();
-      expect(service.decrypt).toBeDefined();
+      testServiceMethodAvailability(EncryptionMethod.Blowfish);
     });
 
     it('should return Rabbit service', () => {
-      const service = encryptionService.getService(EncryptionMethod.Rabbit);
-      expect(service).toBeDefined();
-      expect(service.encrypt).toBeDefined();
-      expect(service.decrypt).toBeDefined();
+      testServiceMethodAvailability(EncryptionMethod.Rabbit);
     });
 
     it('should throw error for unsupported encryption method', () => {

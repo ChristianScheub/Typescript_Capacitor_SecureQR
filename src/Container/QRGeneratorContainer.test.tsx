@@ -5,6 +5,8 @@ import { QRGeneratorContainer } from './QRGeneratorContainer';
 import { encryptionService } from '../Services/EncryptionService/encryptionService';
 import QRCode from 'qrcode';
 import Logger from '../Services/Logger/logger';
+import { createMockEncryptionService, setupGlobalMocks, clearAllTestMocks } from '../test-utils/commonMocks';
+import { setupEncryptionServiceMock } from '../test-utils/containerTestHelpers';
 
 // Mock dependencies
 jest.mock('../Services/EncryptionService/encryptionService');
@@ -65,17 +67,13 @@ jest.mock('react-i18next', () => ({
 }));
 
 describe('QRGeneratorContainer', () => {
-  const mockEncryptionService = {
-    encrypt: jest.fn(),
-    decrypt: jest.fn(),
-  };
+  const mockEncryptionService = createMockEncryptionService();
 
   beforeEach(() => {
-    jest.clearAllMocks();
-    (encryptionService.getService as jest.Mock).mockReturnValue(mockEncryptionService);
-    mockEncryptionService.encrypt.mockReturnValue('encrypted-data');
+    clearAllTestMocks();
+    setupGlobalMocks();
+    setupEncryptionServiceMock(encryptionService, mockEncryptionService);
     (QRCode.toDataURL as jest.Mock).mockResolvedValue('data:image/png;base64,mockqrcode');
-    global.alert = jest.fn();
   });
 
   it('renders without crashing', () => {

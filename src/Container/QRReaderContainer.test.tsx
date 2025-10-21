@@ -4,6 +4,8 @@ import '@testing-library/jest-dom';
 import { QRReaderContainer } from './QRReaderContainer';
 import { encryptionService } from '../Services/EncryptionService/encryptionService';
 import Logger from '../Services/Logger/logger';
+import { createMockEncryptionService, setupGlobalMocks, clearAllTestMocks } from '../test-utils/commonMocks';
+import { setupEncryptionServiceMock } from '../test-utils/containerTestHelpers';
 
 // Mock dependencies
 jest.mock('../Services/EncryptionService/encryptionService');
@@ -49,17 +51,12 @@ jest.mock('react-i18next', () => ({
 }));
 
 describe('QRReaderContainer', () => {
-  const mockEncryptionService = {
-    encrypt: jest.fn(),
-    decrypt: jest.fn(),
-  };
+  const mockEncryptionService = createMockEncryptionService();
 
   beforeEach(() => {
-    jest.clearAllMocks();
-    (encryptionService.getService as jest.Mock).mockReturnValue(mockEncryptionService);
-    mockEncryptionService.decrypt.mockReturnValue('Decrypted message');
-    global.alert = jest.fn();
-    global.prompt = jest.fn(() => 'testPassword');
+    clearAllTestMocks();
+    setupGlobalMocks();
+    setupEncryptionServiceMock(encryptionService, mockEncryptionService);
   });
 
   it('renders without crashing', () => {
