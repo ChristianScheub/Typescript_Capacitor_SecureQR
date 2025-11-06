@@ -13,13 +13,13 @@ module.exports = {
     '!src/main.tsx',
     '!src/vite-env.d.ts',
     '!src/**/*.types.ts',
+    '!src/**/*Props.tsx',
     '!src/i18n.ts',
     '!src/Services/Ads/**',
-    '!src/Views/**',
-    '!src/UIComponets/**',
-    '!src/Views/NavBar/**',
     '!src/legal/app_texts.ts',
     '!src/test-utils/**',
+    '!src/UIComponets/QRScanner.tsx',
+    '!src/Views/**',
   ],
   coverageThreshold: {
     global: {
