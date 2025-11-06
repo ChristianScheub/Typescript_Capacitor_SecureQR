@@ -13,7 +13,7 @@ module.exports = {
     '!src/main.tsx',
     '!src/vite-env.d.ts',
     '!src/**/*.types.ts',
-    '!src/**/*Props.tsx',
+    '!src/**/*Props.ts',
     '!src/i18n.ts',
     '!src/Services/Ads/**',
     '!src/legal/app_texts.ts',
