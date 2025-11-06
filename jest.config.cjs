@@ -40,12 +40,8 @@ module.exports = {
         jsx: 'react-jsx',
         esModuleInterop: true,
         allowSyntheticDefaultImports: true,
+        resolveJsonModule: true,
       },
     }],
-  },
-  globals: {
-    'ts-jest': {
-      isolatedModules: true,
-    },
   },
 };

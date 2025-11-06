@@ -17,7 +17,7 @@ const MaterialDropdown = <T extends string>({
   options,
   selectedValue,
   onChange,
-}: MaterialDropdownProps<T>): JSX.Element => {
+}: MaterialDropdownProps<T>): React.JSX.Element => {
   return (
     <FormControl fullWidth style={{ marginTop: "16px" }}>
       <InputLabel id={`${label}-label`}>{label}</InputLabel>

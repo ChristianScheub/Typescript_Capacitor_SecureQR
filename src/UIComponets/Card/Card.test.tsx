@@ -37,7 +37,7 @@ describe('Card', () => {
   });
 
   it('should render empty card', () => {
-    const { container } = render(<Card></Card>);
+    const { container } = render(<Card>{''}</Card>);
     const cardElement = container.querySelector('.card-container');
     expect(cardElement).toBeInTheDocument();
   });
