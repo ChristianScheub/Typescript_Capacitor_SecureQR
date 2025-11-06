@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Impressum from './impressum';
 
-jest.mock('../app_configuration/app_texts', () => ({
+jest.mock('./app_texts', () => ({
     impressum_text: 'Mocked Impressum Text'
 }));
 
