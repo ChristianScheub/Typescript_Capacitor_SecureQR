@@ -7,47 +7,24 @@ import Logger from '../Services/Logger/logger';
 import { createMockEncryptionService, setupGlobalMocks, clearAllTestMocks } from '../test-utils/commonMocks';
 import { setupEncryptionServiceMock } from '../test-utils/containerTestHelpers';
 
-// Mock dependencies
 jest.mock('../Services/EncryptionService/encryptionService');
 jest.mock('../Services/Logger/logger');
-
-// Mock the view component
 jest.mock('../Views/QRReaderView', () => ({
-  QRReaderView: ({ 
-    scannedText, 
-    decryptedText, 
-    encryptionMethod, 
-    onScan, 
-    onNewScan, 
-    onEncryptionMethodChange 
-  }: any) => (
+  QRReaderView: ({ scannedText, decryptedText, encryptionMethod, onScan, onNewScan, onEncryptionMethodChange }: any) => (
     <div>
-      <select 
-        data-testid="encryption-select" 
-        value={encryptionMethod} 
-        onChange={(e) => onEncryptionMethodChange(e.target.value)} 
-      >
+      <select data-testid="encryption-select" value={encryptionMethod} onChange={(e) => onEncryptionMethodChange(e.target.value)}>
         <option value="AES256">AES256</option>
         <option value="TripleDES">TripleDES</option>
       </select>
-      <button 
-        data-testid="scan-button" 
-        onClick={() => onScan('encrypted-test-data')}
-      >
-        Scan
-      </button>
+      <button data-testid="scan-button" onClick={() => onScan('encrypted-test-data')}>Scan</button>
       <button data-testid="new-scan-button" onClick={onNewScan}>New Scan</button>
       {scannedText && <div data-testid="scanned-text">{scannedText}</div>}
       {decryptedText && <div data-testid="decrypted-text">{decryptedText}</div>}
     </div>
   ),
 }));
-
-// Mock react-i18next
 jest.mock('react-i18next', () => ({
-  useTranslation: () => ({
-    t: (key: string) => key,
-  }),
+  useTranslation: () => ({ t: (key: string) => key }),
 }));
 
 describe('QRReaderContainer', () => {
@@ -67,17 +44,13 @@ describe('QRReaderContainer', () => {
 
   it('updates encryption method', () => {
     render(<QRReaderContainer />);
-    const encryptionSelect = screen.getByTestId('encryption-select') as HTMLSelectElement;
-    
-    fireEvent.change(encryptionSelect, { target: { value: 'TripleDES' } });
-    expect(encryptionSelect.value).toBe('TripleDES');
+    fireEvent.change(screen.getByTestId('encryption-select'), { target: { value: 'TripleDES' } });
+    expect((screen.getByTestId('encryption-select') as HTMLSelectElement).value).toBe('TripleDES');
   });
 
   it('handles scan with valid data and password', async () => {
     render(<QRReaderContainer />);
-    
-    const scanButton = screen.getByTestId('scan-button');
-    fireEvent.click(scanButton);
+    fireEvent.click(screen.getByTestId('scan-button'));
     
     await waitFor(() => {
       expect(global.prompt).toHaveBeenCalledWith('readerContainer_ScanPasswordPrompt');
@@ -89,39 +62,22 @@ describe('QRReaderContainer', () => {
 
   it('shows alert when password is not provided', async () => {
     global.prompt = jest.fn(() => null);
-    
     render(<QRReaderContainer />);
-    
-    const scanButton = screen.getByTestId('scan-button');
-    fireEvent.click(scanButton);
-    
-    await waitFor(() => {
-      expect(global.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered');
-    });
+    fireEvent.click(screen.getByTestId('scan-button'));
+    await waitFor(() => expect(global.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
   });
 
   it('shows alert when password is empty string', async () => {
     global.prompt = jest.fn(() => '');
-    
     render(<QRReaderContainer />);
-    
-    const scanButton = screen.getByTestId('scan-button');
-    fireEvent.click(scanButton);
-    
-    await waitFor(() => {
-      expect(global.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered');
-    });
+    fireEvent.click(screen.getByTestId('scan-button'));
+    await waitFor(() => expect(global.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
   });
 
   it('handles decryption error', async () => {
-    mockEncryptionService.decrypt.mockImplementation(() => {
-      throw new Error('Decryption failed');
-    });
-
+    mockEncryptionService.decrypt.mockImplementation(() => { throw new Error('Decryption failed'); });
     render(<QRReaderContainer />);
-    
-    const scanButton = screen.getByTestId('scan-button');
-    fireEvent.click(scanButton);
+    fireEvent.click(screen.getByTestId('scan-button'));
     
     await waitFor(() => {
       expect(Logger.error).toHaveBeenCalledWith(expect.stringContaining('Decryption Error'));
@@ -130,41 +86,17 @@ describe('QRReaderContainer', () => {
   });
 
   it('handles scan with null data', async () => {
-    render(<QRReaderContainer />);
-    
     const { QRReaderView } = require('../Views/QRReaderView');
-    const mockOnScan = jest.fn();
-    
-    render(
-      <QRReaderView
-        scannedText={null}
-        decryptedText={null}
-        encryptionMethod="AES256"
-        onScan={mockOnScan}
-        onNewScan={jest.fn()}
-        onEncryptionMethodChange={jest.fn()}
-      />
-    );
-    
-    // Verify component can handle null scannedText
+    render(<QRReaderView scannedText={null} decryptedText={null} encryptionMethod="AES256" onScan={jest.fn()} onNewScan={jest.fn()} onEncryptionMethodChange={jest.fn()} />);
     expect(screen.queryByTestId('scanned-text')).not.toBeInTheDocument();
   });
 
   it('resets state on new scan', async () => {
     render(<QRReaderContainer />);
+    fireEvent.click(screen.getByTestId('scan-button'));
+    await waitFor(() => expect(screen.getByTestId('scanned-text')).toBeInTheDocument());
     
-    // First scan
-    const scanButton = screen.getByTestId('scan-button');
-    fireEvent.click(scanButton);
-    
-    await waitFor(() => {
-      expect(screen.getByTestId('scanned-text')).toBeInTheDocument();
-    });
-    
-    // New scan
-    const newScanButton = screen.getByTestId('new-scan-button');
-    fireEvent.click(newScanButton);
-    
+    fireEvent.click(screen.getByTestId('new-scan-button'));
     await waitFor(() => {
       expect(screen.queryByTestId('scanned-text')).not.toBeInTheDocument();
       expect(screen.queryByTestId('decrypted-text')).not.toBeInTheDocument();
@@ -173,17 +105,8 @@ describe('QRReaderContainer', () => {
 
   it('uses selected encryption method for decryption', async () => {
     render(<QRReaderContainer />);
-    
-    // Change encryption method
-    const encryptionSelect = screen.getByTestId('encryption-select');
-    fireEvent.change(encryptionSelect, { target: { value: 'TripleDES' } });
-    
-    // Scan
-    const scanButton = screen.getByTestId('scan-button');
-    fireEvent.click(scanButton);
-    
-    await waitFor(() => {
-      expect(encryptionService.getService).toHaveBeenCalledWith('TripleDES');
-    });
+    fireEvent.change(screen.getByTestId('encryption-select'), { target: { value: 'TripleDES' } });
+    fireEvent.click(screen.getByTestId('scan-button'));
+    await waitFor(() => expect(encryptionService.getService).toHaveBeenCalledWith('TripleDES'));
   });
 });

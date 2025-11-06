@@ -8,47 +8,17 @@ import Logger from '../Services/Logger/logger';
 import { createMockEncryptionService, setupGlobalMocks, clearAllTestMocks } from '../test-utils/commonMocks';
 import { setupEncryptionServiceMock } from '../test-utils/containerTestHelpers';
 
-// Mock dependencies
 jest.mock('../Services/EncryptionService/encryptionService');
 jest.mock('qrcode');
 jest.mock('../Services/Logger/logger');
-jest.mock('../Services/FileHandler/fileHandler', () => ({
-  handleImageDownload: jest.fn(),
-}));
-jest.mock('../Services/Ads/AdInterstitial', () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
-
-// Mock the view component
+jest.mock('../Services/FileHandler/fileHandler', () => ({ handleImageDownload: jest.fn() }));
+jest.mock('../Services/Ads/AdInterstitial', () => ({ __esModule: true, default: jest.fn() }));
 jest.mock('../Views/QRGeneratorView', () => ({
-  QRGeneratorView: ({ 
-    text, 
-    password, 
-    encryptionMethod, 
-    qrCode, 
-    onTextChange, 
-    onPasswordChange, 
-    onEncryptionMethodChange, 
-    onGenerateQRCode, 
-    onDownloadQRCode 
-  }: any) => (
+  QRGeneratorView: ({ text, password, encryptionMethod, qrCode, onTextChange, onPasswordChange, onEncryptionMethodChange, onGenerateQRCode, onDownloadQRCode }: any) => (
     <div>
-      <input 
-        data-testid="text-input" 
-        value={text} 
-        onChange={(e) => onTextChange(e.target.value)} 
-      />
-      <input 
-        data-testid="password-input" 
-        value={password} 
-        onChange={(e) => onPasswordChange(e.target.value)} 
-      />
-      <select 
-        data-testid="encryption-select" 
-        value={encryptionMethod} 
-        onChange={(e) => onEncryptionMethodChange(e.target.value)} 
-      >
+      <input data-testid="text-input" value={text} onChange={(e) => onTextChange(e.target.value)} />
+      <input data-testid="password-input" value={password} onChange={(e) => onPasswordChange(e.target.value)} />
+      <select data-testid="encryption-select" value={encryptionMethod} onChange={(e) => onEncryptionMethodChange(e.target.value)}>
         <option value="AES256">AES256</option>
         <option value="TripleDES">TripleDES</option>
       </select>
@@ -58,12 +28,8 @@ jest.mock('../Views/QRGeneratorView', () => ({
     </div>
   ),
 }));
-
-// Mock react-i18next
 jest.mock('react-i18next', () => ({
-  useTranslation: () => ({
-    t: (key: string) => key,
-  }),
+  useTranslation: () => ({ t: (key: string) => key }),
 }));
 
 describe('QRGeneratorContainer', () => {
@@ -84,49 +50,33 @@ describe('QRGeneratorContainer', () => {
 
   it('updates text input', () => {
     render(<QRGeneratorContainer />);
-    const textInput = screen.getByTestId('text-input') as HTMLInputElement;
-    
-    fireEvent.change(textInput, { target: { value: 'Test message' } });
-    expect(textInput.value).toBe('Test message');
+    fireEvent.change(screen.getByTestId('text-input'), { target: { value: 'Test message' } });
+    expect((screen.getByTestId('text-input') as HTMLInputElement).value).toBe('Test message');
   });
 
   it('updates password input', () => {
     render(<QRGeneratorContainer />);
-    const passwordInput = screen.getByTestId('password-input') as HTMLInputElement;
-    
-    fireEvent.change(passwordInput, { target: { value: 'password123' } });
-    expect(passwordInput.value).toBe('password123');
+    fireEvent.change(screen.getByTestId('password-input'), { target: { value: 'password123' } });
+    expect((screen.getByTestId('password-input') as HTMLInputElement).value).toBe('password123');
   });
 
   it('updates encryption method', () => {
     render(<QRGeneratorContainer />);
-    const encryptionSelect = screen.getByTestId('encryption-select') as HTMLSelectElement;
-    
-    fireEvent.change(encryptionSelect, { target: { value: 'TripleDES' } });
-    expect(encryptionSelect.value).toBe('TripleDES');
+    fireEvent.change(screen.getByTestId('encryption-select'), { target: { value: 'TripleDES' } });
+    expect((screen.getByTestId('encryption-select') as HTMLSelectElement).value).toBe('TripleDES');
   });
 
   it('shows alert when generating QR without text or password', async () => {
     render(<QRGeneratorContainer />);
-    const generateButton = screen.getByTestId('generate-button');
-    
-    fireEvent.click(generateButton);
-    
-    await waitFor(() => {
-      expect(global.alert).toHaveBeenCalledWith('generatorContainer_PopupNoTextPassword');
-    });
+    fireEvent.click(screen.getByTestId('generate-button'));
+    await waitFor(() => expect(global.alert).toHaveBeenCalledWith('generatorContainer_PopupNoTextPassword'));
   });
 
   it('generates QR code successfully', async () => {
     render(<QRGeneratorContainer />);
-    
-    const textInput = screen.getByTestId('text-input');
-    const passwordInput = screen.getByTestId('password-input');
-    const generateButton = screen.getByTestId('generate-button');
-    
-    fireEvent.change(textInput, { target: { value: 'Test message' } });
-    fireEvent.change(passwordInput, { target: { value: 'password123' } });
-    fireEvent.click(generateButton);
+    fireEvent.change(screen.getByTestId('text-input'), { target: { value: 'Test message' } });
+    fireEvent.change(screen.getByTestId('password-input'), { target: { value: 'password123' } });
+    fireEvent.click(screen.getByTestId('generate-button'));
     
     await waitFor(() => {
       expect(mockEncryptionService.encrypt).toHaveBeenCalledWith('Test message', 'password123');
@@ -136,19 +86,11 @@ describe('QRGeneratorContainer', () => {
   });
 
   it('handles QR generation error', async () => {
-    mockEncryptionService.encrypt.mockImplementation(() => {
-      throw new Error('Encryption failed');
-    });
-
+    mockEncryptionService.encrypt.mockImplementation(() => { throw new Error('Encryption failed'); });
     render(<QRGeneratorContainer />);
-    
-    const textInput = screen.getByTestId('text-input');
-    const passwordInput = screen.getByTestId('password-input');
-    const generateButton = screen.getByTestId('generate-button');
-    
-    fireEvent.change(textInput, { target: { value: 'Test message' } });
-    fireEvent.change(passwordInput, { target: { value: 'password123' } });
-    fireEvent.click(generateButton);
+    fireEvent.change(screen.getByTestId('text-input'), { target: { value: 'Test message' } });
+    fireEvent.change(screen.getByTestId('password-input'), { target: { value: 'password123' } });
+    fireEvent.click(screen.getByTestId('generate-button'));
     
     await waitFor(() => {
       expect(Logger.error).toHaveBeenCalled();
@@ -158,37 +100,19 @@ describe('QRGeneratorContainer', () => {
 
   it('downloads QR code when available', async () => {
     const { handleImageDownload } = require('../Services/FileHandler/fileHandler');
-    
     render(<QRGeneratorContainer />);
+    fireEvent.change(screen.getByTestId('text-input'), { target: { value: 'Test message' } });
+    fireEvent.change(screen.getByTestId('password-input'), { target: { value: 'password123' } });
+    fireEvent.click(screen.getByTestId('generate-button'));
     
-    // Generate QR code first
-    const textInput = screen.getByTestId('text-input');
-    const passwordInput = screen.getByTestId('password-input');
-    const generateButton = screen.getByTestId('generate-button');
-    
-    fireEvent.change(textInput, { target: { value: 'Test message' } });
-    fireEvent.change(passwordInput, { target: { value: 'password123' } });
-    fireEvent.click(generateButton);
-    
-    await waitFor(() => {
-      expect(screen.getByTestId('qr-code')).toBeInTheDocument();
-    });
-    
-    // Now download
-    const downloadButton = screen.getByTestId('download-button');
-    fireEvent.click(downloadButton);
-    
-    await waitFor(() => {
-      expect(handleImageDownload).toHaveBeenCalledWith('data:image/png;base64,mockqrcode');
-    });
+    await waitFor(() => expect(screen.getByTestId('qr-code')).toBeInTheDocument());
+    fireEvent.click(screen.getByTestId('download-button'));
+    await waitFor(() => expect(handleImageDownload).toHaveBeenCalledWith('data:image/png;base64,mockqrcode'));
   });
 
   it('shows warning when trying to download without QR code', () => {
     render(<QRGeneratorContainer />);
-    
-    const downloadButton = screen.getByTestId('download-button');
-    fireEvent.click(downloadButton);
-    
+    fireEvent.click(screen.getByTestId('download-button'));
     expect(Logger.warn).toHaveBeenCalledWith('No QR code to download');
     expect(global.alert).toHaveBeenCalledWith('generatorContainer_NoQrCodeDownload');
   });
