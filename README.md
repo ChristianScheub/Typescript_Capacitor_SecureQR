@@ -1,6 +1,6 @@
 # Secure QR
 Last Dependencies update:  11.2025
-Last Edit: 12.2024 <br>
+Last Edit: 11.2025 <br>
 Language: Typescript React Capacitor with Vite<br>
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR) 
