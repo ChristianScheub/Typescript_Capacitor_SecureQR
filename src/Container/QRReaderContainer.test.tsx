@@ -59,7 +59,7 @@ describe('QRReaderContainer', () => {
     fireEvent.click(screen.getByTestId('scan-button'));
     
     await waitFor(() => {
-      expect(global.prompt).toHaveBeenCalledWith('readerContainer_ScanPasswordPrompt');
+      expect(globalThis.prompt).toHaveBeenCalledWith('readerContainer_ScanPasswordPrompt');
       expect(mockEncryptionService.decrypt).toHaveBeenCalledWith('encrypted-test-data', 'testPassword');
       expect(screen.getByTestId('scanned-text')).toHaveTextContent('encrypted-test-data');
       expect(screen.getByTestId('decrypted-text')).toHaveTextContent('Decrypted message');
@@ -67,17 +67,17 @@ describe('QRReaderContainer', () => {
   });
 
   it('shows alert when password is not provided', async () => {
-    global.prompt = jest.fn(() => null);
+    globalThis.prompt = jest.fn(() => null);
     render(<QRReaderContainer />);
     fireEvent.click(screen.getByTestId('scan-button'));
-    await waitFor(() => expect(global.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
+    await waitFor(() => expect(globalThis.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
   });
 
   it('shows alert when password is empty string', async () => {
-    global.prompt = jest.fn(() => '');
+    globalThis.prompt = jest.fn(() => '');
     render(<QRReaderContainer />);
     fireEvent.click(screen.getByTestId('scan-button'));
-    await waitFor(() => expect(global.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
+    await waitFor(() => expect(globalThis.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
   });
 
   it('handles decryption error', async () => {
@@ -87,7 +87,7 @@ describe('QRReaderContainer', () => {
     
     await waitFor(() => {
       expect(Logger.error).toHaveBeenCalledWith(expect.stringContaining('Decryption Error'));
-      expect(global.alert).toHaveBeenCalledWith('popup_error');
+      expect(globalThis.alert).toHaveBeenCalledWith('popup_error');
     });
   });
 
@@ -130,7 +130,7 @@ describe('QRReaderContainer', () => {
     await waitFor(() => {
       expect(mockScanImage).toHaveBeenCalledWith(file, { returnDetailedScanResult: true });
       expect(Logger.info).toHaveBeenCalledWith(expect.stringContaining('QR Code detected from image'));
-      expect(global.prompt).toHaveBeenCalledWith('readerContainer_ScanPasswordPrompt');
+      expect(globalThis.prompt).toHaveBeenCalledWith('readerContainer_ScanPasswordPrompt');
       expect(screen.getByTestId('scanned-text')).toHaveTextContent('encrypted-image-data');
     });
   });
@@ -148,7 +148,7 @@ describe('QRReaderContainer', () => {
     
     await waitFor(() => {
       expect(Logger.error).toHaveBeenCalledWith(expect.stringContaining('Error scanning image'));
-      expect(global.alert).toHaveBeenCalledWith('popup_error');
+      expect(globalThis.alert).toHaveBeenCalledWith('popup_error');
     });
   });
 
