@@ -26,6 +26,7 @@
   "readerView_EncryptedText": "Testo scansionato (criptato)",
   "readerView_DecryptedText": "Testo decriptato",
   "readerView_ButtonNewScan": "Nuova scansione",
+  "readerView_ButtonImportFromGallery": "Importa dalla galleria",
   "readerContainer_noPasswortEntered": "Nessuna password inserita.",
   "readerContainer_ScanPasswordPrompt": "Inserire la password:",
   "popup_error": "Si è verificato un errore, riprovare!",

@@ -4,6 +4,7 @@ import { encryptionService } from "../Services/EncryptionService/encryptionServi
 import { EncryptionMethod } from "../types/EncryptionMethod.types";
 import { useTranslation } from "react-i18next";
 import Logger from "../Services/Logger/logger";
+import QrScanner from "qr-scanner";
 
 export const QRReaderContainer: React.FC = () => {
   const [scannedText, setScannedText] = useState<string | null>(null);
@@ -38,6 +39,29 @@ export const QRReaderContainer: React.FC = () => {
     setDecryptedText(null);
   };
 
+  const handleImageUpload = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (!file) {
+      return;
+    }
+
+    try {
+      const result = await QrScanner.scanImage(file, {
+        returnDetailedScanResult: true,
+      });
+      Logger.info("QR Code detected from image: " + result.data);
+      handleScan(result.data);
+    } catch (error) {
+      Logger.error("Error scanning image: " + error);
+      alert(t("popup_error"));
+    }
+
+    // Reset the input value to allow selecting the same file again
+    event.target.value = "";
+  };
+
   return (
     <QRReaderView
       scannedText={scannedText}
@@ -46,6 +70,7 @@ export const QRReaderContainer: React.FC = () => {
       onScan={handleScan}
       onNewScan={handleNewScan}
       onEncryptionMethodChange={setEncryptionMethod}
+      onImageUpload={handleImageUpload}
     />
   );
 };

@@ -26,6 +26,7 @@
   "readerView_EncryptedText": "Skannattu teksti (salattu)",
   "readerView_DecryptedText": "Salauksen purettu teksti",
   "readerView_ButtonNewScan": "Uusi skannaus",
+  "readerView_ButtonImportFromGallery": "Tuo galleriasta",
   "readerContainer_noPasswortEntered": "Salasana ei ole syötetty.",
   "readerContainer_ScanPasswordPrompt": "Syötä salasana:",
   "popup_error": "Tapahtui virhe, yritä uudelleen!",

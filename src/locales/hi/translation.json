@@ -26,6 +26,7 @@
     "readerView_EncryptedText": "स्कैन किया गया पाठ (एन्क्रिप्टेड)",
     "readerView_DecryptedText": "डिक्रिप्टेड पाठ",
     "readerView_ButtonNewScan": "नया स्कैन",
+    "readerView_ButtonImportFromGallery": "गैलरी से आयात करें",
     "readerContainer_noPasswortEntered": "कोई पासवर्ड दर्ज नहीं किया गया।",
     "readerContainer_ScanPasswordPrompt": "कृपया पासवर्ड दर्ज करें:",
     "popup_error": "एक त्रुटि हुई, कृपया पुनः प्रयास करें!",

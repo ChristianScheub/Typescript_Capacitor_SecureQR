@@ -26,6 +26,7 @@
   "readerView_EncryptedText": "Gescanste tekst (versleuteld)",
   "readerView_DecryptedText": "Ontsleutelde tekst",
   "readerView_ButtonNewScan": "Nieuw scan",
+  "readerView_ButtonImportFromGallery": "Importeren uit galerij",
   "readerContainer_noPasswortEntered": "Geen wachtwoord ingevoerd.",
   "readerContainer_ScanPasswordPrompt": "Voer het wachtwoord in:",
   "popup_error": "Er is een fout opgetreden, probeer opnieuw!",
