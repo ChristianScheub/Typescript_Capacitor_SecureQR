@@ -26,6 +26,7 @@
     "readerView_EncryptedText": "스캔된 텍스트 (암호화됨)",
     "readerView_DecryptedText": "해독된 텍스트",
     "readerView_ButtonNewScan": "새 스캔",
+    "readerView_ButtonImportFromGallery": "갤러리에서 가져오기",
     "readerContainer_noPasswortEntered": "비밀번호가 입력되지 않았습니다.",
     "readerContainer_ScanPasswordPrompt": "비밀번호를 입력하세요:",
     "popup_error": "오류가 발생했습니다. 다시 시도해주세요!",

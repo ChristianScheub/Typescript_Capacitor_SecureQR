@@ -26,6 +26,7 @@
     "readerView_EncryptedText": "النص الممسوح ضوئيًا (مشفر)",
     "readerView_DecryptedText": "النص المفكك تشفيره",
     "readerView_ButtonNewScan": "مسح جديد",
+    "readerView_ButtonImportFromGallery": "استيراد من المعرض",
     "readerContainer_noPasswortEntered": "لم يتم إدخال كلمة مرور.",
     "readerContainer_ScanPasswordPrompt": "يرجى إدخال كلمة المرور:",
     "popup_error": "حدث خطأ، يرجى المحاولة مرة أخرى!",

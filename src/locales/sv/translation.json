@@ -26,6 +26,7 @@
   "readerView_EncryptedText": "Skannad text (krypterad)",
   "readerView_DecryptedText": "Avkodad text",
   "readerView_ButtonNewScan": "Ny skanning",
+  "readerView_ButtonImportFromGallery": "Importera från galleri",
   "readerContainer_noPasswortEntered": "Inget lösenord angivet.",
   "readerContainer_ScanPasswordPrompt": "Ange lösenord:",
   "popup_error": "Ett fel uppstod, försök igen!",

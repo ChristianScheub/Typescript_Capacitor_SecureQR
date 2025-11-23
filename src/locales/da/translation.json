@@ -26,6 +26,7 @@
   "readerView_EncryptedText": "Scannet tekst (krypteret)",
   "readerView_DecryptedText": "Dekrypteret tekst",
   "readerView_ButtonNewScan": "Ny scanning",
+  "readerView_ButtonImportFromGallery": "Importér fra galleri",
   "readerContainer_noPasswortEntered": "Ingen adgangskode angivet.",
   "readerContainer_ScanPasswordPrompt": "Indtast adgangskode:",
   "popup_error": "Der opstod en fejl, prøv igen!",

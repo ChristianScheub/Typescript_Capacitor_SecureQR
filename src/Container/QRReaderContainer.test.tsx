@@ -6,11 +6,16 @@ import { encryptionService } from '../Services/EncryptionService/encryptionServi
 import Logger from '../Services/Logger/logger';
 import { createMockEncryptionService, setupGlobalMocks, clearAllTestMocks } from '../test-utils/commonMocks';
 import { setupEncryptionServiceMock } from '../test-utils/containerTestHelpers';
+import QrScanner from 'qr-scanner';
 
 jest.mock('../Services/EncryptionService/encryptionService');
 jest.mock('../Services/Logger/logger');
+jest.mock('qr-scanner', () => ({
+  default: jest.fn(),
+  scanImage: jest.fn(),
+}));
 jest.mock('../Views/QRReaderView', () => ({
-  QRReaderView: ({ scannedText, decryptedText, encryptionMethod, onScan, onNewScan, onEncryptionMethodChange }: any) => (
+  QRReaderView: ({ scannedText, decryptedText, encryptionMethod, onScan, onNewScan, onEncryptionMethodChange, onImageUpload }: any) => (
     <div>
       <select data-testid="encryption-select" value={encryptionMethod} onChange={(e) => onEncryptionMethodChange(e.target.value)}>
         <option value="AES256">AES256</option>
@@ -18,6 +23,7 @@ jest.mock('../Views/QRReaderView', () => ({
       </select>
       <button data-testid="scan-button" onClick={() => onScan('encrypted-test-data')}>Scan</button>
       <button data-testid="new-scan-button" onClick={onNewScan}>New Scan</button>
+      <input data-testid="image-upload" type="file" onChange={onImageUpload} />
       {scannedText && <div data-testid="scanned-text">{scannedText}</div>}
       {decryptedText && <div data-testid="decrypted-text">{decryptedText}</div>}
     </div>
@@ -53,7 +59,7 @@ describe('QRReaderContainer', () => {
     fireEvent.click(screen.getByTestId('scan-button'));
     
     await waitFor(() => {
-      expect(global.prompt).toHaveBeenCalledWith('readerContainer_ScanPasswordPrompt');
+      expect(globalThis.prompt).toHaveBeenCalledWith('readerContainer_ScanPasswordPrompt');
       expect(mockEncryptionService.decrypt).toHaveBeenCalledWith('encrypted-test-data', 'testPassword');
       expect(screen.getByTestId('scanned-text')).toHaveTextContent('encrypted-test-data');
       expect(screen.getByTestId('decrypted-text')).toHaveTextContent('Decrypted message');
@@ -61,17 +67,17 @@ describe('QRReaderContainer', () => {
   });
 
   it('shows alert when password is not provided', async () => {
-    global.prompt = jest.fn(() => null);
+    globalThis.prompt = jest.fn(() => null);
     render(<QRReaderContainer />);
     fireEvent.click(screen.getByTestId('scan-button'));
-    await waitFor(() => expect(global.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
+    await waitFor(() => expect(globalThis.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
   });
 
   it('shows alert when password is empty string', async () => {
-    global.prompt = jest.fn(() => '');
+    globalThis.prompt = jest.fn(() => '');
     render(<QRReaderContainer />);
     fireEvent.click(screen.getByTestId('scan-button'));
-    await waitFor(() => expect(global.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
+    await waitFor(() => expect(globalThis.alert).toHaveBeenCalledWith('readerContainer_noPasswortEntered'));
   });
 
   it('handles decryption error', async () => {
@@ -81,7 +87,7 @@ describe('QRReaderContainer', () => {
     
     await waitFor(() => {
       expect(Logger.error).toHaveBeenCalledWith(expect.stringContaining('Decryption Error'));
-      expect(global.alert).toHaveBeenCalledWith('popup_error');
+      expect(globalThis.alert).toHaveBeenCalledWith('popup_error');
     });
   });
 
@@ -108,5 +114,54 @@ describe('QRReaderContainer', () => {
     fireEvent.change(screen.getByTestId('encryption-select'), { target: { value: 'TripleDES' } });
     fireEvent.click(screen.getByTestId('scan-button'));
     await waitFor(() => expect(encryptionService.getService).toHaveBeenCalledWith('TripleDES'));
+  });
+
+  it('handles image upload with valid QR code', async () => {
+    const mockScanImage = QrScanner.scanImage as jest.Mock;
+    mockScanImage.mockResolvedValue({ data: 'encrypted-image-data' });
+
+    render(<QRReaderContainer />);
+    
+    const file = new File(['dummy content'], 'test.png', { type: 'image/png' });
+    const input = screen.getByTestId('image-upload');
+    
+    fireEvent.change(input, { target: { files: [file] } });
+    
+    await waitFor(() => {
+      expect(mockScanImage).toHaveBeenCalledWith(file, { returnDetailedScanResult: true });
+      expect(Logger.info).toHaveBeenCalledWith(expect.stringContaining('QR Code detected from image'));
+      expect(globalThis.prompt).toHaveBeenCalledWith('readerContainer_ScanPasswordPrompt');
+      expect(screen.getByTestId('scanned-text')).toHaveTextContent('encrypted-image-data');
+    });
+  });
+
+  it('handles image upload error', async () => {
+    const mockScanImage = QrScanner.scanImage as jest.Mock;
+    mockScanImage.mockRejectedValue(new Error('No QR code found'));
+
+    render(<QRReaderContainer />);
+    
+    const file = new File(['dummy content'], 'test.png', { type: 'image/png' });
+    const input = screen.getByTestId('image-upload');
+    
+    fireEvent.change(input, { target: { files: [file] } });
+    
+    await waitFor(() => {
+      expect(Logger.error).toHaveBeenCalledWith(expect.stringContaining('Error scanning image'));
+      expect(globalThis.alert).toHaveBeenCalledWith('popup_error');
+    });
+  });
+
+  it('handles image upload with no file selected', async () => {
+    const mockScanImage = QrScanner.scanImage as jest.Mock;
+    
+    render(<QRReaderContainer />);
+    
+    const input = screen.getByTestId('image-upload');
+    fireEvent.change(input, { target: { files: [] } });
+    
+    await waitFor(() => {
+      expect(mockScanImage).not.toHaveBeenCalled();
+    });
   });
 });

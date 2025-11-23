@@ -26,6 +26,7 @@
     "readerView_EncryptedText": "扫描的文本（加密）",
     "readerView_DecryptedText": "解密文本",
     "readerView_ButtonNewScan": "重新扫描",
+    "readerView_ButtonImportFromGallery": "从相册导入",
     "readerContainer_noPasswortEntered": "未输入密码。",
     "readerContainer_ScanPasswordPrompt": "请输入密码：",
     "popup_error": "发生错误，请重试！",

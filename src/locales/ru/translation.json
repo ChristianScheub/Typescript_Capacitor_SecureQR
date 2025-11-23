@@ -26,6 +26,7 @@
   "readerView_EncryptedText": "Сканированный текст (зашифрованный)",
   "readerView_DecryptedText": "Дешифрованный текст",
   "readerView_ButtonNewScan": "Новый скан",
+  "readerView_ButtonImportFromGallery": "Импортировать из галереи",
   "readerContainer_noPasswortEntered": "Не введен пароль.",
   "readerContainer_ScanPasswordPrompt": "Пожалуйста, введите пароль:",
   "popup_error": "Произошла ошибка, попробуйте снова!",

@@ -26,6 +26,7 @@
     "readerView_EncryptedText": "スキャンされたテキスト（暗号化済み）",
     "readerView_DecryptedText": "復号化されたテキスト",
     "readerView_ButtonNewScan": "新しいスキャン",
+    "readerView_ButtonImportFromGallery": "ギャラリーからインポート",
     "readerContainer_noPasswortEntered": "パスワードが入力されていません。",
     "readerContainer_ScanPasswordPrompt": "パスワードを入力してください：",
     "popup_error": "エラーが発生しました。もう一度お試しください！",

@@ -13,6 +13,7 @@ interface QRReaderViewProps {
   onScan: (data: string | null) => void;
   onNewScan: () => void;
   onEncryptionMethodChange: (method: EncryptionMethod) => void;
+  onImageUpload: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const QRReaderView: React.FC<QRReaderViewProps> = ({
@@ -22,12 +23,18 @@ export const QRReaderView: React.FC<QRReaderViewProps> = ({
   onScan,
   onNewScan,
   onEncryptionMethodChange,
+  onImageUpload,
 }) => {
   const encryptionOptions = Object.values(EncryptionMethod).map((method) => ({
     label: method,
     value: method,
   }));
   const { t } = useTranslation();
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleImportClick = () => {
+    fileInputRef.current?.click();
+  };
 
   return (
     <div className="fillScreen">
@@ -40,7 +47,25 @@ export const QRReaderView: React.FC<QRReaderViewProps> = ({
           onChange={onEncryptionMethodChange}
         />
         <br />
-        {!scannedText && !decryptedText && <QRScanner onScan={onScan} />}
+        {!scannedText && !decryptedText && (
+          <>
+            <Button
+              className="password-submit-btn width100"
+              onClick={handleImportClick}
+              style={{ marginTop: "1rem" }}
+            >
+              {t("readerView_ButtonImportFromGallery")}
+            </Button>
+            <QRScanner onScan={onScan} />
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              onChange={onImageUpload}
+              style={{ display: "none" }}
+            />
+          </>
+        )}
 
         {(scannedText || decryptedText) && (
           <div>
