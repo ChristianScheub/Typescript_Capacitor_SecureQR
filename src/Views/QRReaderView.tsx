@@ -49,6 +49,13 @@ export const QRReaderView: React.FC<QRReaderViewProps> = ({
         <br />
         {!scannedText && !decryptedText && (
           <>
+            <Button
+              className="password-submit-btn width100"
+              onClick={handleImportClick}
+              style={{ marginTop: "1rem" }}
+            >
+              {t("readerView_ButtonImportFromGallery")}
+            </Button>
             <QRScanner onScan={onScan} />
             <input
               ref={fileInputRef}
@@ -57,13 +64,6 @@ export const QRReaderView: React.FC<QRReaderViewProps> = ({
               onChange={onImageUpload}
               style={{ display: "none" }}
             />
-            <Button
-              className="password-submit-btn width100"
-              onClick={handleImportClick}
-              style={{ marginTop: "1rem" }}
-            >
-              {t("readerView_ButtonImportFromGallery")}
-            </Button>
           </>
         )}
 

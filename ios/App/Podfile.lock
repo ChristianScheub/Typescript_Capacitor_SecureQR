@@ -1,19 +1,22 @@
 PODS:
-  - Capacitor (6.2.0):
+  - Capacitor (7.4.4):
     - CapacitorCordova
-  - CapacitorCommunityAdmob (6.1.0):
+  - CapacitorCommunityAdmob (7.2.0):
     - Capacitor
-    - Google-Mobile-Ads-SDK (= 11.3.0)
-  - CapacitorCordova (6.2.0)
-  - CapacitorFilesystem (6.0.2):
+    - Google-Mobile-Ads-SDK (= 12.12.0)
+    - GoogleUserMessagingPlatform (= 3.0.0)
+  - CapacitorCordova (7.4.4)
+  - CapacitorFilesystem (7.1.4):
     - Capacitor
-  - CapacitorShare (6.0.3):
+    - IONFilesystemLib (~> 1.0.1)
+  - CapacitorShare (7.0.2):
     - Capacitor
-  - CapacitorStatusBar (6.0.2):
+  - CapacitorStatusBar (7.0.3):
     - Capacitor
-  - Google-Mobile-Ads-SDK (11.3.0):
+  - Google-Mobile-Ads-SDK (12.12.0):
     - GoogleUserMessagingPlatform (>= 1.1)
-  - GoogleUserMessagingPlatform (2.6.0)
+  - GoogleUserMessagingPlatform (3.0.0)
+  - IONFilesystemLib (1.0.1)
 
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
@@ -27,6 +30,7 @@ SPEC REPOS:
   trunk:
     - Google-Mobile-Ads-SDK
     - GoogleUserMessagingPlatform
+    - IONFilesystemLib
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -43,15 +47,16 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/status-bar"
 
 SPEC CHECKSUMS:
-  Capacitor: 1f3c7b9802d958cd8c4eb63895fff85dff2e1eea
-  CapacitorCommunityAdmob: 1bd311eab1b2a79bbb9975bdac5d39701ad61fb4
-  CapacitorCordova: b33e7f4aa4ed105dd43283acdd940964374a87d9
-  CapacitorFilesystem: c832a3f6d4870c3872688e782ae8e33665e6ecbf
-  CapacitorShare: 7af6ca761ce62030e8e9fbd2eb82416f5ceced38
-  CapacitorStatusBar: 3b9ac7d0684770522c532d1158a1434512ab1477
-  Google-Mobile-Ads-SDK: 301a16c461c331ba34ff4dab40a22ab7c147af61
-  GoogleUserMessagingPlatform: 0c3a08353e53ce8c2feab7addd0b652cde522450
+  Capacitor: 09d9ff8e9618e8c4b3cab2bbee34a17215dd2fef
+  CapacitorCommunityAdmob: 7f73470006ec4586c13058c5f576c456f82ee343
+  CapacitorCordova: bf648a636f3c153f652d312ae145fb508b6ffced
+  CapacitorFilesystem: ac0a386949ed6c295a3dffa129ecd26b881ae5be
+  CapacitorShare: 051c3ceee0ddf3bb54574851a622bbb317eed5bd
+  CapacitorStatusBar: 7d8fcbd6768db014bd721d75e246590b014928e8
+  Google-Mobile-Ads-SDK: 4dde70a8c18d96b14f9548759b8cec6ecb0bc3e6
+  GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
+  IONFilesystemLib: 89258b8e3e85465da93127d25d7ce37f977e8a6f
 
-PODFILE CHECKSUM: 891bf41a4a9145e6b8f5c6306ad6553f93a093e2
+PODFILE CHECKSUM: 0a077b22ad30afdf20d2b2f3d3e94778d6f867c9
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

@@ -1,6 +1,7 @@
 require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
 
-platform :ios, '13.0'
+# Erhöhtes Deployment Target, benötigt von einigen Abhängigkeiten (z.B. IONFilesystemLib)
+platform :ios, '14.0'
 use_frameworks!
 
 # workaround to avoid Xcode caching of Pods that requires
