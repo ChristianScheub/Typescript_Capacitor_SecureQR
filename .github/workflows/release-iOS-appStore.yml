@@ -111,7 +111,7 @@ jobs:
             <key>signingStyle</key><string>manual</string>
             <key>signingCertificate</key><string>Apple Distribution</string>
             <key>provisioningProfiles</key><dict>
-              <key>de.scheub.securePlanner</key><string>${PROFILE}</string>
+              <key>de.scheub.secureqr</key><string>${PROFILE}</string>
             </dict>
             <key>uploadSymbols</key><true/>
           </dict></plist>
