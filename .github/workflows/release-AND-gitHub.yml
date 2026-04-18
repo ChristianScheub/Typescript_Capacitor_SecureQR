@@ -17,6 +17,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/share/boost
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -27,6 +34,12 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
+      
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Clean Gradle jar cache
+        run: rm -rf ~/.gradle/caches/jars-9
 
       - name: Install dependencies
         run: npm install
