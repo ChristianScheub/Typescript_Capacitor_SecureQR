@@ -1,5 +1,5 @@
 # Secure QR
-Last Dependencies update:  11.2025
+Last Dependencies update:  04.2026
 Last Edit: 11.2025 <br>
 Language: Typescript React Capacitor with Vite<br>
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChristianScheub_Typescript_Capacitor_SecureQR&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ChristianScheub_Typescript_Capacitor_SecureQR)
@@ -216,49 +216,50 @@ export default tseslint.config({
 # Used NPM Modules
 According to the command npm list You can see the deeper NPM modules used and which of these are used in the licenses.json.
 
-<br />├── @capacitor-community/admob@6.1.0
-<br />├── @capacitor/android@6.2.0
-<br />├── @capacitor/cli@6.2.0
-<br />├── @capacitor/core@6.2.0
-<br />├── @capacitor/filesystem@6.0.2
-<br />├── @capacitor/ios@6.2.0
-<br />├── @capacitor/share@6.0.3
-<br />├── @capacitor/status-bar@6.0.2
+<br />├── @capacitor-community/admob@8.0.0
+<br />├── @capacitor/android@8.3.1
+<br />├── @capacitor/cli@8.3.1
+<br />├── @capacitor/core@8.3.1
+<br />├── @capacitor/filesystem@8.1.2
+<br />├── @capacitor/ios@8.3.1
+<br />├── @capacitor/share@8.0.1
+<br />├── @capacitor/status-bar@8.0.2
 <br />├── @emotion/react@11.14.0
-<br />├── @emotion/styled@11.14.0
-<br />├── @eslint/js@9.16.0
-<br />├── @mui/icons-material@6.1.10
-<br />├── @mui/material@6.1.10
-<br />├── @testing-library/jest-dom@6.6.3
-<br />├── @testing-library/react@16.1.0
+<br />├── @emotion/styled@11.14.1
+<br />├── @eslint/js@9.39.4
+<br />├── @mui/icons-material@7.3.10
+<br />├── @mui/material@7.3.10
+<br />├── @testing-library/jest-dom@6.9.1
+<br />├── @testing-library/react@16.3.2
+<br />├── @testing-library/user-event@14.6.1
 <br />├── @types/crypto-js@4.2.2
 <br />├── @types/jest@29.5.14
-<br />├── @types/qrcode@1.5.5
-<br />├── @types/react-dom@18.3.2
-<br />├── @types/react-swipeable@5.2.0
-<br />├── @types/react@18.3.14
-<br />├── @vitejs/plugin-react@4.3.4
-<br />├── bootstrap@5.3.3
+<br />├── @types/qrcode@1.5.6
+<br />├── @types/react-dom@19.2.3
+<br />├── @types/react@19.2.14
+<br />├── @vitejs/plugin-react@6.0.1
+<br />├── bootstrap@5.3.8
 <br />├── crypto-js@4.2.0
-<br />├── eslint-plugin-react-hooks@5.1.0
-<br />├── eslint-plugin-react-refresh@0.4.16
-<br />├── eslint@9.16.0
-<br />├── globals@15.13.0
-<br />├── i18next-browser-languagedetector@8.0.2
-<br />├── i18next@24.0.5
-<br />├── install@0.13.0
+<br />├── eslint-plugin-react-hooks@7.1.1
+<br />├── eslint-plugin-react-refresh@0.5.2
+<br />├── eslint@9.39.4
+<br />├── globals@17.5.0
+<br />├── i18next-browser-languagedetector@8.2.1
+<br />├── i18next@25.10.10
+<br />├── identity-obj-proxy@3.0.0
+<br />├── jest-environment-jsdom@30.3.0
 <br />├── jest@29.7.0
-<br />├── npm@10.9.2
+<br />├── license-checker@25.0.1
 <br />├── qr-scanner@1.4.2
 <br />├── qrcode@1.5.4
-<br />├── react-bootstrap@2.10.6
-<br />├── react-dom@18.3.1
-<br />├── react-i18next@15.1.3
-<br />├── react-icons@5.4.0
-<br />├── react-qr-scanner@1.0.0-alpha.11
-<br />├── react-router-dom@7.0.2
+<br />├── react-bootstrap@2.10.10
+<br />├── react-dom@19.2.5
+<br />├── react-i18next@16.6.6
+<br />├── react-icons@5.6.0
+<br />├── react-router-dom@7.14.1
 <br />├── react-swipeable@7.0.2
-<br />├── react@18.3.1
-<br />├── typescript-eslint@8.17.0
-<br />├── typescript@5.6.3
-<br />└── vite@6.0.3
+<br />├── react@19.2.5
+<br />├── ts-jest@29.4.9
+<br />├── typescript-eslint@8.58.2
+<br />├── typescript@5.9.3
+<br />└── vite@8.0.8
