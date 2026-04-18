@@ -28,6 +28,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
+      - name: Clean Gradle jar cache
+        run: rm -rf ~/.gradle/caches/jars-9
+
       - name: Install dependencies
         run: npm install
 
