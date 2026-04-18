@@ -97,7 +97,8 @@ jobs:
       - name: Create ExportOptions plists
         run: |
           TEAM="${{ secrets.APPLE_TEAM_ID }}"
-          PROFILE="${{ secrets.IOS_PROVISIONING_PROFILE_NAME }}"
+          # Use UUID (already installed) instead of display name to avoid lookup failures
+          PROFILE="${PROVISIONING_PROFILE_UUID}"
 
           for DEST in export upload; do
             cat > "$RUNNER_TEMP/ExportOptions-${DEST}.plist" <<PLIST
